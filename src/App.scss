@@ -1,0 +1,10 @@
+$primaryBackground: hsl(185, 41%, 84%);
+$darkCyan: hsl(183, 100%, 15%);
+$darkerGrayCyan: hsl(186, 14%, 43%);
+$darkGrayCyan: hsl(184, 14%, 56%);
+$lightGrayCyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+body {
+  background-color: $primaryBackground;
+}
