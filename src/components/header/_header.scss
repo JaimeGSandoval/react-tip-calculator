@@ -1,0 +1,15 @@
+@import '../../sass/abstracts/variables';
+
+.header-text {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  line-height: 1.6rem;
+  font-family: 'Space Mono Bold';
+  color: $darkCyan;
+  width: 100%;
+}
+
+header {
+  padding: 1.6rem 0;
+}

@@ -1,10 +1,12 @@
+import React from 'react';
+import Header from './components/header/Header';
 import './sass/main.scss';
 
 function App() {
   return (
-    <div>
-      <h1>bankai</h1>
-    </div>
+    <>
+      <Header />
+    </>
   );
 }
 
