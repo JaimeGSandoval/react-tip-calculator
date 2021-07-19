@@ -1,0 +1,6 @@
+@import './abstracts/_variables', './base/fonts';
+
+body {
+  background-color: $primaryBackground;
+  font-family: 'Space Mono';
+}
