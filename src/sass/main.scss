@@ -1,10 +1,21 @@
-@import './abstracts/_variables', './base/fonts';
+@import './abstracts/_variables', './base/fonts', './base/reset';
 
 body {
   background-color: $primaryBackground;
-  font-family: 'Space Mono';
+  font-family: $spaceMono;
+  overflow-y: hidden;
 }
 
 .content-container {
-  width: 100%;
+  background-color: $white;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.main-container {
+  width: 84%;
+  margin: auto;
 }
