@@ -1,13 +1,18 @@
 import React from 'react';
 import Header from './components/header/Header';
+import BillInput from './components/bill-total-input/BillInput';
 import './sass/main.scss';
 
 function App() {
   return (
-    <div className="content-container">
+    <>
       <Header />
-      <main className="main-container"></main>
-    </div>
+      <div className="content-container">
+        <main className="main-container">
+          <BillInput />
+        </main>
+      </div>
+    </>
   );
 }
 
