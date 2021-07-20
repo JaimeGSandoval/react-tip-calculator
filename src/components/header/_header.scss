@@ -1,0 +1,25 @@
+@import '../../sass/abstracts/variables', '../../sass/layout/media-queries';
+
+.header-text {
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-family: 'Space Mono Bold';
+  color: $darkCyan;
+  width: 100%;
+  display: block;
+
+    @include tablet {
+    font-size: 1.4rem;
+  }
+
+}
+
+header {
+  padding: 1.6rem 0;
+}
+
+header span:nth-child(1)  {
+  padding-bottom: 0.7rem;
+}
