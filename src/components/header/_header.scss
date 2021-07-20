@@ -1,4 +1,4 @@
-@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/variables', '../../sass/layout/media-queries';
 
 .header-text {
   text-align: center;
@@ -8,6 +8,10 @@
   font-family: 'Space Mono Bold';
   color: $darkCyan;
   width: 100%;
+
+    @include tablet {
+    font-size: 1.4rem;
+  }
 }
 
 header {
