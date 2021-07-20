@@ -19,3 +19,17 @@ body {
   width: 84%;
   margin: auto;
 }
+
+.total-container {
+  width: 86%;
+  height: 100px;
+  border-radius: 5px;
+  margin: .8rem auto;
+  background-color: $darkCyan;
+}
+
+.tip-per-container {
+  display: flex;
+  justify-content: space-between;
+
+}

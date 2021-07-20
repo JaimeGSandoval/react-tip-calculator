@@ -3,6 +3,7 @@ import Header from './components/header/Header';
 import BillInput from './components/bill-total-input/BillInput';
 import PercentageButtons from './components/percentage-buttons/PercentageButtons';
 import PersonInput from './components/person-total-input/PersonInput';
+import TipPerPerson from './components/tip-per-person/TipPerPerson';
 import './sass/main.scss';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
           <PercentageButtons />
           <PersonInput />
         </main>
+        <section className="total-container">
+          <TipPerPerson />
+        </section>
       </div>
     </>
   );
