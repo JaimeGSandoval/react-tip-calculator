@@ -5,6 +5,7 @@ import PercentageButtons from './components/percentage-buttons/PercentageButtons
 import PersonInput from './components/person-total-input/PersonInput';
 import TipPerPerson from './components/tip-per-person/TipPerPerson';
 import TipTotal from './components/tip-total/TipTotal';
+import ResetButton from './components/reset-button/ResetButton';
 import './sass/main.scss';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <section className="total-container">
           <TipPerPerson />
           <TipTotal />
+          <ResetButton />
         </section>
       </div>
     </>
