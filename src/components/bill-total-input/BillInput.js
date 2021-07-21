@@ -5,7 +5,7 @@ function BillInput() {
   return (
     <div className="bill-input-container">
       <div className="bill-text-box">
-        <label className="bill-text" for="bill-input">
+        <label className="bill-text" htmlFor="bill-input">
           Bill
         </label>
       </div>
@@ -14,7 +14,7 @@ function BillInput() {
           xmlns="http://www.w3.org/2000/svg"
           width="30"
           height="30"
-          class="dollar-svg"
+          className="dollar-svg"
         >
           <path
             fill="#9EBBBD"

@@ -1,0 +1,16 @@
+@import "../../sass/abstracts/variables";
+
+button {
+  text-transform: uppercase;
+  background-color: $strongCyan;
+  color: $darkCyan;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  margin: auto;
+  display: block;
+  border-radius: 5px;
+  padding: .6rem 0;
+  font-family: $spaceMonoBold;
+  font-size: 1.2rem;
+}
