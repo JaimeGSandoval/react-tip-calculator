@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './_bill-input.scss';
 
 function BillInput() {
+  const [billAmount, setBillAmount] = useState(null);
+
   return (
     <div className="bill-input-container">
       <div className="bill-text-box">
@@ -24,9 +26,10 @@ function BillInput() {
 
         <input
           id="bill-input"
-          value="142.35"
           className="bill-input"
           type="text"
+          value={billAmount}
+          onChange={(e) => setBillAmount(e.target.value)}
         />
       </div>
     </div>
