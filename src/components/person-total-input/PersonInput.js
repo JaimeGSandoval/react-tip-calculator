@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './_person-input.scss';
 
 const PersonTotal = () => {
+  const [personTotal, setPersonTotal] = useState(null);
+
   return (
     <div className="person-input-container">
       <div className="person-text-box">
@@ -24,9 +26,10 @@ const PersonTotal = () => {
 
         <input
           id="person-input"
-          value="5"
+          value={personTotal}
           className="person-input"
           type="text"
+          onChange={(e) => setPersonTotal(e.target.value)}
         />
       </div>
     </div>
