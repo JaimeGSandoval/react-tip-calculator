@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './_bill-input.scss';
 
 function BillInput() {
-  const [billAmount, setBillAmount] = useState(null);
+  const [billAmount, setBillAmount] = useState('');
 
   return (
     <div className="bill-input-container">
@@ -25,11 +25,12 @@ function BillInput() {
         </svg>
 
         <input
-          id="bill-input"
-          className="bill-input"
-          type="text"
+          type="number"
           value={billAmount}
           onChange={(e) => setBillAmount(e.target.value)}
+          id="bill-input"
+          className="bill-input"
+          placeholder={'0'}
         />
       </div>
     </div>

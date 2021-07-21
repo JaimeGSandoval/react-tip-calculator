@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './_percent-button.scss';
 
 const tipPercentages = [5, 10, 15, 25, 50];
@@ -12,6 +12,8 @@ const Button = ({ percentage }) => {
 };
 
 const PercentButtons = () => {
+  const [customPercent, setCustomPercent] = useState('');
+
   return (
     <>
       <span className="select-header">Select Tip %</span>
@@ -19,7 +21,12 @@ const PercentButtons = () => {
         {tipPercentages.map((number) => (
           <Button percentage={number} key={number} />
         ))}
-        <input type="text" placeholder="Custom" />
+        <input
+          type="number"
+          value={customPercent}
+          onChange={(e) => setCustomPercent(e.target.value)}
+          placeholder="Custom"
+        />
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './_person-input.scss';
 
 const PersonTotal = () => {
-  const [personTotal, setPersonTotal] = useState(null);
+  const [personTotal, setPersonTotal] = useState(0);
 
   return (
     <div className="person-input-container">
@@ -25,11 +25,12 @@ const PersonTotal = () => {
         </svg>
 
         <input
+          type="number"
           id="person-input"
           value={personTotal}
           className="person-input"
-          type="text"
           onChange={(e) => setPersonTotal(e.target.value)}
+          placeholder="0"
         />
       </div>
     </div>
