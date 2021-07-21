@@ -1,0 +1,22 @@
+@import '../../sass/abstracts/variables';
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.tip-total {
+  font-size: 1.5rem;
+  color: $strongCyan;
+   padding-top: .2rem;
+}
+
+.span-1 {
+  color: $white;
+  font-family: $spaceMono;
+}
+
+.span-2 {
+  color: $darkerGrayCyan;
+  font-family: $spaceMono;
+}
