@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/header/Header';
 import BillInput from './components/bill-total-input/BillInput';
 import PercentageButtons from './components/percentage-buttons/PercentageButtons';
@@ -9,12 +9,14 @@ import ResetButton from './components/reset-button/ResetButton';
 import './sass/main.scss';
 
 function App() {
+  const [billTotal, setBillTotal] = useState(null);
+
   return (
     <>
       <Header />
       <div className="content-container">
         <main className="main-container">
-          <BillInput />
+          <BillInput billTotal={(bill) => setBillTotal(bill)} />
           <PercentageButtons />
           <PersonInput />
         </main>
