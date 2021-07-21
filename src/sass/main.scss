@@ -19,3 +19,21 @@ body {
   width: 84%;
   margin: auto;
 }
+
+.total-container {
+  width: 86%;
+  border-radius: 5px;
+  margin: .8rem auto;
+  background-color: $darkCyan;
+}
+
+.tip-per-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner-container {
+  width: 90%;
+  margin: auto;
+  padding: 1rem .5rem;
+}
