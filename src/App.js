@@ -19,9 +19,11 @@ function App() {
           <PersonInput />
         </main>
         <section className="total-container">
-          <TipPerPerson />
-          <TipTotal />
-          <ResetButton />
+          <div className="inner-container">
+            <TipPerPerson />
+            <TipTotal />
+            <ResetButton />
+          </div>
         </section>
       </div>
     </>
