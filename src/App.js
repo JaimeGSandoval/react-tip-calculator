@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/header/Header';
 import BillInput from './components/bill-total-input/BillInput';
 import PercentageButtons from './components/percentage-buttons/PercentageButtons';
@@ -11,20 +11,40 @@ import './sass/main.scss';
 function App() {
   const [billTotal, setBillTotal] = useState('');
   const [numberOfPeople, setNumberOfPeople] = useState('');
+  const [percent, setPercent] = useState(0);
   const [customPercent, setCustomPercent] = useState('');
-  const [tipPerPerson, setTipPerson] = useState('1.23');
-  const [tipTotal, setTipTotal] = useState('4.56');
+  const [tipPerPerson, setTipPerPerson] = useState('0.00');
+  const [tipTotal, setTipTotal] = useState('0.00');
+
+  const getPercent = (percentValue) => {
+    setPercent(percentValue);
+  };
+
+  useEffect(() => {
+    const calculateTip = () => {
+      const valueCheck = billTotal * percent;
+      if (!valueCheck) {
+        return null;
+      } else {
+        const totalPerPerson = (billTotal * percent) / numberOfPeople;
+        const grandTipTotal = billTotal * percent;
+
+        setTipPerPerson(totalPerPerson);
+        setTipTotal(grandTipTotal);
+      }
+    };
+
+    calculateTip();
+  }, [percent, billTotal, numberOfPeople, tipPerPerson, tipTotal]);
 
   const resetTipAmounts = () => {
     setBillTotal('');
     setNumberOfPeople('');
+    setPercent('');
     setCustomPercent('');
-    setTipPerson('0.00');
+    setTipPerPerson('0.00');
     setTipTotal('0.00');
   };
-
-  // will get the percent amount from the button clicked
-  // const getPercent = () => {};
 
   return (
     <>
@@ -36,6 +56,7 @@ function App() {
             setBill={(bill) => setBillTotal(bill)}
           />
           <PercentageButtons
+            getPercent={getPercent}
             customPercent={customPercent}
             setCustomPercent={(percent) => setCustomPercent(percent)}
           />
