@@ -1,10 +1,10 @@
 import React from 'react';
 import './_reset-button.scss';
 
-const ResetButton = () => {
+const ResetButton = ({ reset }) => {
   return (
     <>
-      <button>reset</button>
+      <button onClick={reset}>reset</button>
     </>
   );
 };
