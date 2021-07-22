@@ -1,7 +1,7 @@
 import React from 'react';
-import './_person-input.scss';
+import './_number-of-people.scss';
 
-const PersonTotal = () => {
+const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
   return (
     <div className="person-input-container">
       <div className="person-text-box">
@@ -23,14 +23,16 @@ const PersonTotal = () => {
         </svg>
 
         <input
+          type="number"
           id="person-input"
-          value="5"
+          value={numberOfPeople}
           className="person-input"
-          type="text"
+          onChange={(e) => setNumOfPeople(e.target.value)}
+          placeholder="0"
         />
       </div>
     </div>
   );
 };
 
-export default PersonTotal;
+export default NumberOfPeople;
