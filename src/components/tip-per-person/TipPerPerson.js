@@ -9,7 +9,7 @@ const TipPerPerson = ({ tipPerPerson }) => {
         <span className="span-2">/ person</span>
       </div>
 
-      <div className="tip-amount">${tipPerPerson}</div>
+      <div className="tip-amount">{tipPerPerson}</div>
     </div>
   );
 };
