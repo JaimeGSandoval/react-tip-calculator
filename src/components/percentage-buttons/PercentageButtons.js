@@ -11,7 +11,6 @@ const Button = ({ percentage }) => {
 
 const PercentButtons = ({ customPercent, setCustomPercent }) => {
   const tipPercentages = [5, 10, 15, 25, 50];
-  // const [customPercent, setCustomPercent] = useState('');
 
   return (
     <>
