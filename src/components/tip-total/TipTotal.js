@@ -1,7 +1,7 @@
 import React from 'react';
 import './_tip-total.scss';
 
-const TipTotal = () => {
+const TipTotal = ({ tipTotal }) => {
   return (
     <div className="tip-per-container">
       <div className="text-box">
@@ -9,7 +9,7 @@ const TipTotal = () => {
         <span className="span-2">/ person</span>
       </div>
 
-      <div className="tip-total">$32.79</div>
+      <div className="tip-total">${tipTotal}</div>
     </div>
   );
 };
