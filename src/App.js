@@ -6,6 +6,7 @@ import NumberOfPeople from './components/number-of-people/NumberOfPeople';
 import TipPerPerson from './components/tip-per-person/TipPerPerson';
 import TipTotal from './components/tip-total/TipTotal';
 import ResetButton from './components/reset-button/ResetButton';
+import currencyFormatter from './utils/currency-formatter';
 import './sass/main.scss';
 
 function App() {
@@ -13,8 +14,8 @@ function App() {
   const [numberOfPeople, setNumberOfPeople] = useState('');
   const [percent, setPercent] = useState(0);
   const [customPercent, setCustomPercent] = useState('');
-  const [tipPerPerson, setTipPerPerson] = useState('0.00');
-  const [tipTotal, setTipTotal] = useState('0.00');
+  const [tipPerPerson, setTipPerPerson] = useState('$0.00');
+  const [tipTotal, setTipTotal] = useState('$0.00');
 
   const getPercent = (percentValue) => {
     setPercent(percentValue);
@@ -22,20 +23,27 @@ function App() {
 
   useEffect(() => {
     const calculateTip = () => {
+      // if (billTotal < 0) {
+      //   alert('Bill Amount must be a value greater than 1.');
+      //   return null;
+      // }
+
       const valueCheck = billTotal * percent;
-      if (!valueCheck) {
+      if (!valueCheck || billTotal < 1) {
         return null;
       } else {
         const totalPerPerson = (billTotal * percent) / numberOfPeople;
         const grandTipTotal = billTotal * percent;
 
-        setTipPerPerson(totalPerPerson);
-        setTipTotal(grandTipTotal);
+        setTipPerPerson(
+          currencyFormatter.format(+totalPerPerson.toFixed(2) / 100)
+        );
+        setTipTotal(currencyFormatter.format(+grandTipTotal.toFixed(2) / 100));
       }
     };
 
     calculateTip();
-  }, [percent, billTotal, numberOfPeople, tipPerPerson, tipTotal]);
+  }, [percent, billTotal, numberOfPeople]);
 
   const resetTipAmounts = () => {
     setBillTotal('');
