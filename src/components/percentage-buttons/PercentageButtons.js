@@ -1,15 +1,20 @@
 import React from 'react';
 import './_percent-button.scss';
 
-const Button = ({ percentage }) => {
+const Button = ({ percentage, getPercent }) => {
   return (
     <>
-      <button className="buttons">{percentage}%</button>
+      <button
+        onClick={(e) => getPercent(parseInt(e.target.innerText))}
+        className="buttons"
+      >
+        {percentage}%
+      </button>
     </>
   );
 };
 
-const PercentButtons = ({ customPercent, setCustomPercent }) => {
+const PercentButtons = ({ getPercent, customPercent, setCustomPercent }) => {
   const tipPercentages = [5, 10, 15, 25, 50];
 
   return (
@@ -17,7 +22,7 @@ const PercentButtons = ({ customPercent, setCustomPercent }) => {
       <span className="select-header">Select Tip %</span>
       <div className="percent-button-container">
         {tipPercentages.map((percent) => (
-          <Button percentage={percent} key={percent} />
+          <Button getPercent={getPercent} percentage={percent} key={percent} />
         ))}
         <input
           type="number"
