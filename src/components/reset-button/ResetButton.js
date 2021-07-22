@@ -1,10 +1,10 @@
 import React from 'react';
 import './_reset-button.scss';
 
-const ResetButton = ({ reset }) => {
+const ResetButton = ({ resetTipAmounts }) => {
   return (
     <>
-      <button onClick={reset}>reset</button>
+      <button onClick={resetTipAmounts}>reset</button>
     </>
   );
 };

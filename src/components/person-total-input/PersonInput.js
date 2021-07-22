@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './_person-input.scss';
 
 const PersonTotal = () => {
-  const [personTotal, setPersonTotal] = useState(0);
+  const [personTotal, setPersonTotal] = useState('');
 
   return (
     <div className="person-input-container">
@@ -30,7 +30,7 @@ const PersonTotal = () => {
           value={personTotal}
           className="person-input"
           onChange={(e) => setPersonTotal(e.target.value)}
-          placeholder="0"
+          placeholder="0.00"
         />
       </div>
     </div>

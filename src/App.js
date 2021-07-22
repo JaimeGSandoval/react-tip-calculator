@@ -9,21 +9,32 @@ import ResetButton from './components/reset-button/ResetButton';
 import './sass/main.scss';
 
 function App() {
-  const [billTotal, setBillTotal] = useState(0);
+  const [billTotal, setBillTotal] = useState('');
   const [tipPerPerson, setTipPerson] = useState('5.55');
   const [tipTotal, setTipTotal] = useState('5.55');
 
-  const reset = () => {
-    setTipPerson('0.00');
+  // useEffect(() => {
+  //   // console.log((billTotal / 4) * 0.25);
+  // }, [billTotal]);
+
+  const resetTipAmounts = () => {
+    setBillTotal('');
+    setTipPerson('');
     setTipTotal('0.00');
   };
+
+  // will get the percent amount from the button clicked
+  // const getPercent = () => {};
 
   return (
     <>
       <Header />
       <div className="content-container">
         <main className="main-container">
-          <BillInput billTotal={(bill) => setBillTotal(bill)} />
+          <BillInput
+            billAmount={billTotal}
+            setBill={(bill) => setBillTotal(bill)}
+          />
           <PercentageButtons />
           <PersonInput />
         </main>
@@ -31,7 +42,7 @@ function App() {
           <div className="inner-container">
             <TipPerPerson tipPerPerson={tipPerPerson} />
             <TipTotal tipTotal={tipTotal} />
-            <ResetButton reset={reset} />
+            <ResetButton resetTipAmounts={resetTipAmounts} />
           </div>
         </section>
       </div>

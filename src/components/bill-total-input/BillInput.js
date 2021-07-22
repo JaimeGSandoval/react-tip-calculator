@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './_bill-input.scss';
 
-function BillInput({ billTotal }) {
-  const [billAmount, setBillAmount] = useState('');
+function BillInput({ billAmount, setBill }) {
+  // const [billAmount, setBillAmount] = useState('');
 
-  const onBillChange = (strNum) => {
-    setBillAmount(strNum);
-  };
+  // useEffect(() => {
+  //   setBill(billAmount);
+  // }, [billAmount, setBill]);
 
   return (
     <div className="bill-input-container">
@@ -31,14 +31,15 @@ function BillInput({ billTotal }) {
         <input
           type="number"
           value={billAmount}
-          onChange={(e) => onBillChange(e.target.value)}
+          onChange={(e) => setBill(e.target.value)}
           id="bill-input"
           className="bill-input"
-          placeholder={'0'}
+          placeholder={'0.00'}
         />
       </div>
     </div>
   );
 }
 
+// onChange={(e) => onBillChange(e.target.value)}
 export default BillInput;
