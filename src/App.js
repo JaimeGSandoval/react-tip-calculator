@@ -11,12 +11,14 @@ import './sass/main.scss';
 function App() {
   const [billTotal, setBillTotal] = useState('');
   const [numberOfPeople, setNumberOfPeople] = useState('');
-  const [tipPerPerson, setTipPerson] = useState('0.00');
-  const [tipTotal, setTipTotal] = useState('0.00');
+  const [customPercent, setCustomPercent] = useState('');
+  const [tipPerPerson, setTipPerson] = useState('1.23');
+  const [tipTotal, setTipTotal] = useState('4.56');
 
   const resetTipAmounts = () => {
     setBillTotal('');
     setNumberOfPeople('');
+    setCustomPercent('');
     setTipPerson('0.00');
     setTipTotal('0.00');
   };
@@ -33,7 +35,10 @@ function App() {
             billAmount={billTotal}
             setBill={(bill) => setBillTotal(bill)}
           />
-          <PercentageButtons />
+          <PercentageButtons
+            customPercent={customPercent}
+            setCustomPercent={(percent) => setCustomPercent(percent)}
+          />
           <NumberOfPeople
             numberOfPeople={numberOfPeople}
             setNumOfPeople={(number) => setNumberOfPeople(number)}

@@ -2,8 +2,6 @@ import React from 'react';
 import './_number-of-people.scss';
 
 const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
-  // const [personTotal, setPersonTotal] = useState('');
-
   return (
     <div className="person-input-container">
       <div className="person-text-box">

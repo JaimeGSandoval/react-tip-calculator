@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './_percent-button.scss';
 
 const Button = ({ percentage }) => {
@@ -9,9 +9,9 @@ const Button = ({ percentage }) => {
   );
 };
 
-const PercentButtons = () => {
+const PercentButtons = ({ customPercent, setCustomPercent }) => {
   const tipPercentages = [5, 10, 15, 25, 50];
-  const [customPercent, setCustomPercent] = useState('');
+  // const [customPercent, setCustomPercent] = useState('');
 
   return (
     <>
