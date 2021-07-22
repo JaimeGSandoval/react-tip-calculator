@@ -26,11 +26,16 @@ function App() {
       if (!valueCheck) {
         return null;
       } else {
-        setTipPerPerson(billTotal * percent);
+        const totalPerPerson = (billTotal * percent) / numberOfPeople;
+        const grandTipTotal = billTotal * percent;
+
+        setTipPerPerson(totalPerPerson);
+        setTipTotal(grandTipTotal);
       }
     };
+
     calculateTip();
-  }, [percent, billTotal]);
+  }, [percent, billTotal, numberOfPeople, tipPerPerson, tipTotal]);
 
   const resetTipAmounts = () => {
     setBillTotal('');
