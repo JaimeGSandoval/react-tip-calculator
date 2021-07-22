@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import './_person-input.scss';
+import React from 'react';
+import './_number-of-people.scss';
 
-const PersonTotal = () => {
-  const [personTotal, setPersonTotal] = useState('');
+const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
+  // const [personTotal, setPersonTotal] = useState('');
 
   return (
     <div className="person-input-container">
@@ -27,14 +27,14 @@ const PersonTotal = () => {
         <input
           type="number"
           id="person-input"
-          value={personTotal}
+          value={numberOfPeople}
           className="person-input"
-          onChange={(e) => setPersonTotal(e.target.value)}
-          placeholder="0.00"
+          onChange={(e) => setNumOfPeople(e.target.value)}
+          placeholder="0"
         />
       </div>
     </div>
   );
 };
 
-export default PersonTotal;
+export default NumberOfPeople;
