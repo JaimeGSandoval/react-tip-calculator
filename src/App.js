@@ -18,6 +18,10 @@ function App() {
   const [tipTotal, setTipTotal] = useState('$0.00');
 
   const getPercent = (percentValue) => {
+    // if (customPercent) {
+    //   // console.log(typeof customPercent);
+    //   setPercent(+customPercent);
+    // }
     setPercent(percentValue);
   };
 
@@ -27,7 +31,6 @@ function App() {
       //   alert('Bill Amount must be a value greater than 1.');
       //   return null;
       // }
-
       const valueCheck = billTotal * percent;
       if (!valueCheck || billTotal < 1) {
         return null;
@@ -42,8 +45,13 @@ function App() {
       }
     };
 
+    if (customPercent) {
+      setPercent(+customPercent);
+      return calculateTip();
+    }
+
     calculateTip();
-  }, [percent, billTotal, numberOfPeople]);
+  }, [percent, billTotal, numberOfPeople, customPercent]);
 
   const resetTipAmounts = () => {
     setBillTotal('');
