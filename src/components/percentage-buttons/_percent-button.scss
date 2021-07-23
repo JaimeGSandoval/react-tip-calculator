@@ -19,6 +19,16 @@
     font-family: $spaceMonoBold;
     // font-size: 1.2rem;
     font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+  &:focus {
+    border-color: $strongCyan;
+  }
+
+  &::placeholder {
+   margin-right: .5rem;
+}
     }
 }
 

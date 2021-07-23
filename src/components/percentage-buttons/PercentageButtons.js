@@ -25,6 +25,7 @@ const PercentButtons = ({ getPercent, customPercent, setCustomPercent }) => {
           <Button getPercent={getPercent} percentage={percent} key={percent} />
         ))}
         <input
+          className="person-input"
           type="number"
           value={customPercent}
           onChange={(e) => setCustomPercent(e.target.value)}

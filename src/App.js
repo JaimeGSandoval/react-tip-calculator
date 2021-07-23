@@ -18,10 +18,6 @@ function App() {
   const [tipTotal, setTipTotal] = useState('$0.00');
 
   const getPercent = (percentValue) => {
-    // if (customPercent) {
-    //   // console.log(typeof customPercent);
-    //   setPercent(+customPercent);
-    // }
     setPercent(percentValue);
   };
 
