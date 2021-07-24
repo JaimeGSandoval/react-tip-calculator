@@ -12,36 +12,35 @@ import './sass/main.scss';
 function App() {
   const [billTotal, setBillTotal] = useState('');
   const [numberOfPeople, setNumberOfPeople] = useState('');
-  const [percent, setPercent] = useState(0);
+  const [percent, setPercent] = useState('');
   const [customPercent, setCustomPercent] = useState('');
   const [tipPerPerson, setTipPerPerson] = useState('$0.00');
   const [tipTotal, setTipTotal] = useState('$0.00');
 
   const getPercent = (percentValue) => {
+    if (!numberOfPeople) {
+      return console.error('Value missing for the number of people field.');
+    }
     setPercent(percentValue);
-  };
-
-  const calculateBillTipPercent = (billValue, percentValue) => {
-    return billValue * percentValue;
   };
 
   const calculateTotalPerPerson = (billValue, percentValue, numOfPeople) => {
     return (billValue * percentValue) / numOfPeople;
   };
 
-  // useEffect(() => {
-  //   calculateBillTipPercent(billTotal, percent);
-  // }, [billTotal, percent]);
-
   const calculateTip = useCallback(() => {
-    if (billTotal === '0') {
-      alert("Can't be zero");
-      setBillTotal('');
+    if (numberOfPeople === '0') {
+      console.error("Number of people can't be zero.");
+      return setNumberOfPeople('');
     }
 
-    const valueCheck = calculateBillTipPercent(billTotal, percent);
+    if (billTotal === '0') {
+      console.error("Bill total can't be zero.");
+      return setBillTotal('');
+    }
 
-    if (!valueCheck || billTotal < 1) {
+    const valueCheck = billTotal * percent;
+    if (!valueCheck || billTotal <= 0) {
       return null;
     }
     const totalPerPerson = calculateTotalPerPerson(
@@ -57,13 +56,17 @@ function App() {
   }, [percent, billTotal, numberOfPeople]);
 
   useEffect(() => {
+    if (percent === '0') {
+      console.error("Custom percent can't be 0");
+      return setCustomPercent('');
+    }
     if (customPercent) {
-      setPercent(+customPercent);
+      setPercent(customPercent);
       return calculateTip();
     }
 
     calculateTip();
-  }, [customPercent, calculateTip]);
+  }, [customPercent, calculateTip, percent]);
 
   const resetTipAmounts = () => {
     setBillTotal('');
