@@ -14,4 +14,4 @@ const TipTotal = ({ tipTotal }) => {
   );
 };
 
-export default TipTotal;
+export default React.memo(TipTotal);

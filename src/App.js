@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Header from './components/header/Header';
 import BillInput from './components/bill-total-input/BillInput';
 import PercentageButtons from './components/percentage-buttons/PercentageButtons';
@@ -21,33 +21,49 @@ function App() {
     setPercent(percentValue);
   };
 
+  const calculateBillTipPercent = (billValue, percentValue) => {
+    return billValue * percentValue;
+  };
+
+  const calculateTotalPerPerson = (billValue, percentValue, numOfPeople) => {
+    return (billValue * percentValue) / numOfPeople;
+  };
+
+  // useEffect(() => {
+  //   calculateBillTipPercent(billTotal, percent);
+  // }, [billTotal, percent]);
+
+  const calculateTip = useCallback(() => {
+    if (billTotal === '0') {
+      alert("Can't be zero");
+      setBillTotal('');
+    }
+
+    const valueCheck = calculateBillTipPercent(billTotal, percent);
+
+    if (!valueCheck || billTotal < 1) {
+      return null;
+    }
+    const totalPerPerson = calculateTotalPerPerson(
+      billTotal,
+      percent,
+      numberOfPeople
+    );
+
+    const grandTipTotal = billTotal * percent;
+
+    setTipPerPerson(currencyFormatter.format(+totalPerPerson.toFixed(2) / 100));
+    setTipTotal(currencyFormatter.format(+grandTipTotal.toFixed(2) / 100));
+  }, [percent, billTotal, numberOfPeople]);
+
   useEffect(() => {
-    const calculateTip = () => {
-      // if (billTotal < 0) {
-      //   alert('Bill Amount must be a value greater than 1.');
-      //   return null;
-      // }
-      const valueCheck = billTotal * percent;
-      if (!valueCheck || billTotal < 1) {
-        return null;
-      } else {
-        const totalPerPerson = (billTotal * percent) / numberOfPeople;
-        const grandTipTotal = billTotal * percent;
-
-        setTipPerPerson(
-          currencyFormatter.format(+totalPerPerson.toFixed(2) / 100)
-        );
-        setTipTotal(currencyFormatter.format(+grandTipTotal.toFixed(2) / 100));
-      }
-    };
-
     if (customPercent) {
       setPercent(+customPercent);
       return calculateTip();
     }
 
     calculateTip();
-  }, [percent, billTotal, numberOfPeople, customPercent]);
+  }, [customPercent, calculateTip]);
 
   const resetTipAmounts = () => {
     setBillTotal('');

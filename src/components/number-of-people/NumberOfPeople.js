@@ -2,12 +2,14 @@ import React from 'react';
 import './_number-of-people.scss';
 
 const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
+  console.log('number of people input');
   return (
     <div className="person-input-container">
       <div className="person-text-box">
         <label className="person-text" htmlFor="person-input">
           Number of People
         </label>
+        <span className="error-text">Can't be zero</span>
       </div>
       <div className="person-input-box">
         <svg
@@ -35,4 +37,4 @@ const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
   );
 };
 
-export default NumberOfPeople;
+export default React.memo(NumberOfPeople);

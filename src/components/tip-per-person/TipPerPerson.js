@@ -2,6 +2,7 @@ import React from 'react';
 import './_tip-per-person.scss';
 
 const TipPerPerson = ({ tipPerPerson }) => {
+  console.log('tip per person');
   return (
     <div className="tip-per-container">
       <div className="text-box">
@@ -14,4 +15,4 @@ const TipPerPerson = ({ tipPerPerson }) => {
   );
 };
 
-export default TipPerPerson;
+export default React.memo(TipPerPerson);

@@ -2,6 +2,7 @@ import React from 'react';
 import './_percent-button.scss';
 
 const Button = ({ percentage, getPercent }) => {
+  console.log('percent buttons');
   return (
     <>
       <button
@@ -36,4 +37,4 @@ const PercentButtons = ({ getPercent, customPercent, setCustomPercent }) => {
   );
 };
 
-export default PercentButtons;
+export default React.memo(PercentButtons);

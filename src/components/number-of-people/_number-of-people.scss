@@ -9,6 +9,7 @@
 .person-text {
   color: $darkCyan;
   font-family: $spaceMonoBold;
+  font-size: .9rem;
 }
 
 .person-input-box {
@@ -40,3 +41,10 @@
   top: 11px;
   left: 10px;
 }
+
+
+  .error-text {
+    font-size: .9rem;
+    color: firebrick;
+    margin-left: .4rem;
+  }
