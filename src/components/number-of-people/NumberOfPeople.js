@@ -2,14 +2,21 @@ import React from 'react';
 import './_number-of-people.scss';
 
 const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
-  console.log('number of people input');
+  let personInputStyle = 'person-input';
+  if (numberOfPeople === '0') {
+    numberOfPeople = '';
+    console.error("Number of people can't be zero.");
+    personInputStyle = 'person-input person-input-error';
+  } else {
+    personInputStyle = 'person-input';
+  }
   return (
     <div className="person-input-container">
       <div className="person-text-box">
         <label className="person-text" htmlFor="person-input">
           Number of People
         </label>
-        <span className="error-text">Can't be zero</span>
+        {/* <span className="error-text">Can't be zero</span> */}
       </div>
       <div className="person-input-box">
         <svg
@@ -28,7 +35,7 @@ const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
           type="number"
           id="person-input"
           value={numberOfPeople}
-          className="person-input"
+          className={personInputStyle}
           onChange={(e) => setNumOfPeople(e.target.value)}
           placeholder="0"
         />

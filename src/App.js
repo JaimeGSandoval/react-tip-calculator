@@ -25,18 +25,24 @@ function App() {
   };
 
   const calculateTotalPerPerson = (billValue, percentValue, numOfPeople) => {
-    return (billValue * percentValue) / numOfPeople;
+    if (!billValue || !numOfPeople) {
+      return;
+    }
+    let result = (billValue * percentValue) / numOfPeople;
+    console.log(result);
+    if (isNaN(result)) return;
+    return result;
   };
 
-  if (billTotal === '0') {
-    console.error("Bill total can't be zero.");
-    setBillTotal('');
-  }
+  // if (billTotal === '0') {
+  //   console.error("Bill total can't be zero.");
+  //   setBillTotal('');
+  // }
 
-  if (numberOfPeople === '0') {
-    console.error("Number of people can't be zero.");
-    setNumberOfPeople('');
-  }
+  // if (numberOfPeople === '0') {
+  //   console.error("Number of people can't be zero.");
+  //   setNumberOfPeople('');
+  // }
 
   const calculateTip = useCallback(() => {
     if (!billTotal || !numberOfPeople) {
@@ -50,6 +56,8 @@ function App() {
     );
 
     const grandTipTotal = billTotal * percent;
+
+    if (totalPerPerson === undefined) return;
 
     setTipPerPerson(currencyFormatter.format(+totalPerPerson.toFixed(2) / 100));
     setTipTotal(currencyFormatter.format(+grandTipTotal.toFixed(2) / 100));
