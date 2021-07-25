@@ -2,6 +2,7 @@ import React from 'react';
 import './_percent-button.scss';
 
 const Button = ({ percentage, getPercent }) => {
+  console.log('percent buttons');
   return (
     <>
       <button
@@ -25,6 +26,7 @@ const PercentButtons = ({ getPercent, customPercent, setCustomPercent }) => {
           <Button getPercent={getPercent} percentage={percent} key={percent} />
         ))}
         <input
+          className="person-input"
           type="number"
           value={customPercent}
           onChange={(e) => setCustomPercent(e.target.value)}
@@ -35,4 +37,4 @@ const PercentButtons = ({ getPercent, customPercent, setCustomPercent }) => {
   );
 };
 
-export default PercentButtons;
+export default React.memo(PercentButtons);

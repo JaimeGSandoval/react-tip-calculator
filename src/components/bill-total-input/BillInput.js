@@ -1,7 +1,8 @@
 import React from 'react';
 import './_bill-input.scss';
 
-function BillInput({ billAmount, setBill }) {
+const BillInput = ({ billAmount, setBill }) => {
+  console.log('bill input');
   return (
     <div className="bill-input-container">
       <div className="bill-text-box">
@@ -33,6 +34,6 @@ function BillInput({ billAmount, setBill }) {
       </div>
     </div>
   );
-}
+};
 
-export default BillInput;
+export default React.memo(BillInput);

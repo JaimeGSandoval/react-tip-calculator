@@ -27,7 +27,12 @@
   color: $darkCyan;
   text-align: right;
   outline: none;
-  border:none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+
+  &:focus {
+    border-color: $strongCyan;
+  }
 }
 
 .dollar-svg {

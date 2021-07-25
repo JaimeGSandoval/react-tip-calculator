@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Header from './components/header/Header';
 import BillInput from './components/bill-total-input/BillInput';
 import PercentageButtons from './components/percentage-buttons/PercentageButtons';
@@ -12,46 +12,63 @@ import './sass/main.scss';
 function App() {
   const [billTotal, setBillTotal] = useState('');
   const [numberOfPeople, setNumberOfPeople] = useState('');
-  const [percent, setPercent] = useState(0);
+  const [percent, setPercent] = useState('');
   const [customPercent, setCustomPercent] = useState('');
   const [tipPerPerson, setTipPerPerson] = useState('$0.00');
   const [tipTotal, setTipTotal] = useState('$0.00');
 
   const getPercent = (percentValue) => {
-    // if (customPercent) {
-    //   // console.log(typeof customPercent);
-    //   setPercent(+customPercent);
-    // }
+    if (!numberOfPeople) {
+      return console.error('Value missing for the number of people field.');
+    }
     setPercent(percentValue);
   };
 
+  const calculateTotalPerPerson = (billValue, percentValue, numOfPeople) => {
+    return (billValue * percentValue) / numOfPeople;
+  };
+
+  const calculateTip = useCallback(() => {
+    if (!billTotal || !numberOfPeople) return;
+
+    if (numberOfPeople === '0') {
+      console.error("Number of people can't be zero.");
+      return setNumberOfPeople('');
+    }
+
+    if (billTotal === '0') {
+      console.error("Bill total can't be zero.");
+      return setBillTotal('');
+    }
+
+    const valueCheck = billTotal * percent;
+    if (!valueCheck || billTotal <= 0) {
+      return null;
+    }
+    const totalPerPerson = calculateTotalPerPerson(
+      billTotal,
+      percent,
+      numberOfPeople
+    );
+
+    const grandTipTotal = billTotal * percent;
+
+    setTipPerPerson(currencyFormatter.format(+totalPerPerson.toFixed(2) / 100));
+    setTipTotal(currencyFormatter.format(+grandTipTotal.toFixed(2) / 100));
+  }, [percent, billTotal, numberOfPeople]);
+
   useEffect(() => {
-    const calculateTip = () => {
-      // if (billTotal < 0) {
-      //   alert('Bill Amount must be a value greater than 1.');
-      //   return null;
-      // }
-      const valueCheck = billTotal * percent;
-      if (!valueCheck || billTotal < 1) {
-        return null;
-      } else {
-        const totalPerPerson = (billTotal * percent) / numberOfPeople;
-        const grandTipTotal = billTotal * percent;
-
-        setTipPerPerson(
-          currencyFormatter.format(+totalPerPerson.toFixed(2) / 100)
-        );
-        setTipTotal(currencyFormatter.format(+grandTipTotal.toFixed(2) / 100));
-      }
-    };
-
+    if (customPercent === '0') {
+      console.error("Custom percent can't be 0");
+      return setCustomPercent('');
+    }
     if (customPercent) {
-      setPercent(+customPercent);
+      setPercent(customPercent);
       return calculateTip();
     }
 
     calculateTip();
-  }, [percent, billTotal, numberOfPeople, customPercent]);
+  }, [customPercent, calculateTip]);
 
   const resetTipAmounts = () => {
     setBillTotal('');
