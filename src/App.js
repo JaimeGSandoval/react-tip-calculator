@@ -28,23 +28,21 @@ function App() {
     return (billValue * percentValue) / numOfPeople;
   };
 
+  if (billTotal === '0') {
+    console.error("Bill total can't be zero.");
+    setBillTotal('');
+  }
+
+  if (numberOfPeople === '0') {
+    console.error("Number of people can't be zero.");
+    setNumberOfPeople('');
+  }
+
   const calculateTip = useCallback(() => {
-    if (!billTotal || !numberOfPeople) return;
-
-    if (numberOfPeople === '0') {
-      console.error("Number of people can't be zero.");
-      return setNumberOfPeople('');
+    if (!billTotal || !numberOfPeople) {
+      return;
     }
 
-    if (billTotal === '0') {
-      console.error("Bill total can't be zero.");
-      return setBillTotal('');
-    }
-
-    const valueCheck = billTotal * percent;
-    if (!valueCheck || billTotal <= 0) {
-      return null;
-    }
     const totalPerPerson = calculateTotalPerPerson(
       billTotal,
       percent,
@@ -75,8 +73,8 @@ function App() {
     setNumberOfPeople('');
     setPercent('');
     setCustomPercent('');
-    setTipPerPerson('0.00');
-    setTipTotal('0.00');
+    setTipPerPerson('$0.00');
+    setTipTotal('$0.00');
   };
 
   return (
