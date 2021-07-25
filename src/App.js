@@ -29,6 +29,8 @@ function App() {
   };
 
   const calculateTip = useCallback(() => {
+    if (!billTotal || !numberOfPeople) return;
+
     if (numberOfPeople === '0') {
       console.error("Number of people can't be zero.");
       return setNumberOfPeople('');
@@ -56,7 +58,7 @@ function App() {
   }, [percent, billTotal, numberOfPeople]);
 
   useEffect(() => {
-    if (percent === '0') {
+    if (customPercent === '0') {
       console.error("Custom percent can't be 0");
       return setCustomPercent('');
     }
@@ -66,7 +68,7 @@ function App() {
     }
 
     calculateTip();
-  }, [customPercent, calculateTip, percent]);
+  }, [customPercent, calculateTip]);
 
   const resetTipAmounts = () => {
     setBillTotal('');
