@@ -2,7 +2,15 @@ import React from 'react';
 import './_bill-input.scss';
 
 const BillInput = ({ billAmount, setBill }) => {
-  console.log('bill input');
+  let billInputStyle = 'bill-input';
+  if (billAmount === '0') {
+    billAmount = '';
+    console.error("Bill total can't be zero.");
+    billInputStyle = 'bill-input bill-input-error';
+  } else {
+    billInputStyle = 'bill-input';
+  }
+
   return (
     <div className="bill-input-container">
       <div className="bill-text-box">
@@ -28,7 +36,7 @@ const BillInput = ({ billAmount, setBill }) => {
           value={billAmount}
           onChange={(e) => setBill(e.target.value)}
           id="bill-input"
-          className="bill-input"
+          className={billInputStyle}
           placeholder={'0.00'}
         />
       </div>

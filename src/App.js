@@ -25,26 +25,30 @@ function App() {
   };
 
   const calculateTotalPerPerson = (billValue, percentValue, numOfPeople) => {
-    return (billValue * percentValue) / numOfPeople;
+    if (!billValue || !numOfPeople) {
+      return;
+    }
+    let result = (billValue * percentValue) / numOfPeople;
+    console.log(result);
+    if (isNaN(result)) return;
+    return result;
   };
 
+  // if (billTotal === '0') {
+  //   console.error("Bill total can't be zero.");
+  //   setBillTotal('');
+  // }
+
+  // if (numberOfPeople === '0') {
+  //   console.error("Number of people can't be zero.");
+  //   setNumberOfPeople('');
+  // }
+
   const calculateTip = useCallback(() => {
-    if (!billTotal || !numberOfPeople) return;
-
-    if (numberOfPeople === '0') {
-      console.error("Number of people can't be zero.");
-      return setNumberOfPeople('');
+    if (!billTotal || !numberOfPeople) {
+      return;
     }
 
-    if (billTotal === '0') {
-      console.error("Bill total can't be zero.");
-      return setBillTotal('');
-    }
-
-    const valueCheck = billTotal * percent;
-    if (!valueCheck || billTotal <= 0) {
-      return null;
-    }
     const totalPerPerson = calculateTotalPerPerson(
       billTotal,
       percent,
@@ -52,6 +56,8 @@ function App() {
     );
 
     const grandTipTotal = billTotal * percent;
+
+    if (totalPerPerson === undefined) return;
 
     setTipPerPerson(currencyFormatter.format(+totalPerPerson.toFixed(2) / 100));
     setTipTotal(currencyFormatter.format(+grandTipTotal.toFixed(2) / 100));
@@ -75,8 +81,8 @@ function App() {
     setNumberOfPeople('');
     setPercent('');
     setCustomPercent('');
-    setTipPerPerson('0.00');
-    setTipTotal('0.00');
+    setTipPerPerson('$0.00');
+    setTipTotal('$0.00');
   };
 
   return (

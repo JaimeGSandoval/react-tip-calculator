@@ -2,7 +2,7 @@ import React from 'react';
 import './_percent-button.scss';
 
 const Button = ({ percentage, getPercent }) => {
-  console.log('percent buttons');
+  // console.log('percent buttons');
   return (
     <>
       <button
