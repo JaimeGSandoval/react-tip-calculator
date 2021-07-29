@@ -19,7 +19,6 @@ function App() {
 
   const getPercent = (percentValue) => {
     if (!numberOfPeople) {
-      // return console.error('Value missing for the number of people field.');
       return;
     }
     setPercent(percentValue);
