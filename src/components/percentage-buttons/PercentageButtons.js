@@ -1,13 +1,12 @@
 import React from 'react';
 import './_percent-button.scss';
 
-const Button = ({ percentage, getPercent }) => {
-  // console.log('percent buttons');
+const Button = ({ percentage, getPercent, className }) => {
   return (
     <>
       <button
         onClick={(e) => getPercent(parseInt(e.target.innerText))}
-        className="buttons"
+        className={className}
       >
         {percentage}%
       </button>
@@ -15,16 +14,34 @@ const Button = ({ percentage, getPercent }) => {
   );
 };
 
-const PercentButtons = ({ getPercent, customPercent, setCustomPercent }) => {
+const PercentButtons = ({
+  getPercent,
+  customPercent,
+  setCustomPercent,
+  selectedPercent,
+}) => {
   const tipPercentages = [5, 10, 15, 25, 50];
 
   return (
     <>
       <span className="select-header">Select Tip %</span>
       <div className="percent-button-container">
-        {tipPercentages.map((percent) => (
-          <Button getPercent={getPercent} percentage={percent} key={percent} />
-        ))}
+        {tipPercentages.map((percent) => {
+          let activeClass = '';
+          if (selectedPercent === percent) {
+            activeClass = 'buttons selected-percent';
+          } else {
+            activeClass = 'buttons';
+          }
+          return (
+            <Button
+              getPercent={getPercent}
+              percentage={percent}
+              key={percent}
+              className={activeClass}
+            />
+          );
+        })}
         <input
           className="person-input"
           type="number"
