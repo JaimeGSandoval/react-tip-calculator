@@ -34,16 +34,6 @@ function App() {
     return result;
   };
 
-  // if (billTotal === '0') {
-  //   console.error("Bill total can't be zero.");
-  //   setBillTotal('');
-  // }
-
-  // if (numberOfPeople === '0') {
-  //   console.error("Number of people can't be zero.");
-  //   setNumberOfPeople('');
-  // }
-
   const calculateTip = useCallback(() => {
     if (!billTotal || !numberOfPeople) {
       return;

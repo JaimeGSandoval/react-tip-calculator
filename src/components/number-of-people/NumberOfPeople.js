@@ -3,12 +3,16 @@ import './_number-of-people.scss';
 
 const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
   let personInputStyle = 'person-input';
+  let errorText = '';
   if (numberOfPeople === '0') {
+    errorText = 'error-text';
     numberOfPeople = '';
+
     console.error("Number of people can't be zero.");
     personInputStyle = 'person-input person-input-error';
   } else {
     personInputStyle = 'person-input';
+    errorText = 'error-text display-none';
   }
   return (
     <div className="person-input-container">
@@ -16,7 +20,7 @@ const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
         <label className="person-text" htmlFor="person-input">
           Number of People
         </label>
-        {/* <span className="error-text">Can't be zero</span> */}
+        <span className={errorText}>Can't be zero</span>
       </div>
       <div className="person-input-box">
         <svg

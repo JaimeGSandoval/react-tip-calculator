@@ -43,11 +43,15 @@
 }
 
 
-  // .error-text {
-  //   font-size: .9rem;
-  //   color: firebrick;
-  //   margin-left: .4rem;
-  // }
+  .error-text {
+    font-size: .9rem;
+    color: firebrick;
+    margin-left: .4rem;
+  }
+
+  .display-none {
+    display: none;
+  }
 
   .person-input-error {
     &:focus {
