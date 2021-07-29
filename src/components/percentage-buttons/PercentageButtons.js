@@ -1,12 +1,12 @@
 import React from 'react';
 import './_percent-button.scss';
 
-const Button = ({ percentage, getPercent, className }) => {
+const Button = ({ percentage, getPercent, buttonStyles }) => {
   return (
     <>
       <button
         onClick={(e) => getPercent(parseInt(e.target.innerText))}
-        className={className}
+        className={buttonStyles}
       >
         {percentage}%
       </button>
@@ -27,18 +27,16 @@ const PercentButtons = ({
       <span className="select-header">Select Tip %</span>
       <div className="percent-button-container">
         {tipPercentages.map((percent) => {
-          let activeClass = '';
-          if (selectedPercent === percent) {
-            activeClass = 'buttons selected-percent';
-          } else {
-            activeClass = 'buttons';
-          }
           return (
             <Button
               getPercent={getPercent}
               percentage={percent}
               key={percent}
-              className={activeClass}
+              buttonStyles={
+                selectedPercent === percent
+                  ? 'buttons selected-percent'
+                  : 'buttons'
+              }
             />
           );
         })}
