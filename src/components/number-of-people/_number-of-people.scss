@@ -9,6 +9,7 @@
 .person-text {
   color: $darkCyan;
   font-family: $spaceMonoBold;
+  font-size: .9rem;
 }
 
 .person-input-box {
@@ -26,7 +27,12 @@
   color: $darkCyan;
   text-align: right;
   outline: none;
-  border:none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+
+  &:focus {
+    border-color: $strongCyan;
+  }
 }
 
 .person-svg {
@@ -34,4 +40,21 @@
   // top: 13px;
   top: 11px;
   left: 10px;
+}
+
+
+.error-text {
+  font-size: .9rem;
+  color: firebrick;
+  margin-left: .4rem;
+}
+
+.display-none {
+  display: none;
+}
+
+.person-input-error {
+  &:focus {
+    border-color: firebrick;
+  }
 }

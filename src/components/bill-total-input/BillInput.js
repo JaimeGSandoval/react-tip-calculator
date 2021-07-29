@@ -1,13 +1,26 @@
 import React from 'react';
 import './_bill-input.scss';
 
-function BillInput({ billAmount, setBill }) {
+const BillInput = ({ billAmount, setBill }) => {
+  let billInputStyle = 'bill-input';
+  let errorText = '';
+
+  if (billAmount === '0') {
+    billAmount = '';
+    errorText = 'error-text';
+    billInputStyle = 'bill-input bill-input-error';
+  } else {
+    billInputStyle = 'bill-input';
+    errorText = 'error-text display-none';
+  }
+
   return (
     <div className="bill-input-container">
       <div className="bill-text-box">
         <label className="bill-text" htmlFor="bill-input">
           Bill
         </label>
+        <span className={errorText}>Can't be zero</span>
       </div>
       <div className="bill-input-box">
         <svg
@@ -27,12 +40,12 @@ function BillInput({ billAmount, setBill }) {
           value={billAmount}
           onChange={(e) => setBill(e.target.value)}
           id="bill-input"
-          className="bill-input"
+          className={billInputStyle}
           placeholder={'0.00'}
         />
       </div>
     </div>
   );
-}
+};
 
-export default BillInput;
+export default React.memo(BillInput);
