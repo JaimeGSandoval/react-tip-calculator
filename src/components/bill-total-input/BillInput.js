@@ -3,12 +3,15 @@ import './_bill-input.scss';
 
 const BillInput = ({ billAmount, setBill }) => {
   let billInputStyle = 'bill-input';
+  let errorText = '';
+
   if (billAmount === '0') {
     billAmount = '';
-    console.error("Bill total can't be zero.");
+    errorText = 'error-text';
     billInputStyle = 'bill-input bill-input-error';
   } else {
     billInputStyle = 'bill-input';
+    errorText = 'error-text display-none';
   }
 
   return (
@@ -17,6 +20,7 @@ const BillInput = ({ billAmount, setBill }) => {
         <label className="bill-text" htmlFor="bill-input">
           Bill
         </label>
+        <span className={errorText}>Can't be zero</span>
       </div>
       <div className="bill-input-box">
         <svg
