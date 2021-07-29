@@ -19,7 +19,7 @@ function App() {
 
   const getPercent = (percentValue) => {
     if (!numberOfPeople) {
-      return console.error('Value missing for the number of people field.');
+      return;
     }
     setPercent(percentValue);
   };
@@ -29,7 +29,7 @@ function App() {
       return;
     }
     let result = (billValue * percentValue) / numOfPeople;
-    console.log(result);
+
     if (isNaN(result)) return;
     return result;
   };
@@ -55,9 +55,9 @@ function App() {
 
   useEffect(() => {
     if (customPercent === '0') {
-      console.error("Custom percent can't be 0");
       return setCustomPercent('');
     }
+
     if (customPercent) {
       setPercent(customPercent);
       return calculateTip();
@@ -88,6 +88,7 @@ function App() {
             getPercent={getPercent}
             customPercent={customPercent}
             setCustomPercent={(percent) => setCustomPercent(percent)}
+            selectedPercent={percent}
           />
           <NumberOfPeople
             numberOfPeople={numberOfPeople}
