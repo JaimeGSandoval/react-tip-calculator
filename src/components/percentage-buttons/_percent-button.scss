@@ -49,6 +49,7 @@
   // font-size: 1.2rem;
   font-size: 1rem;
   font-family: $spaceMono;
+  cursor: pointer;
 }
 
 .select-header {
@@ -57,4 +58,10 @@
   padding-top: .7rem;
   padding-bottom: .7rem;
   display: block;
+}
+
+.selected-percent {
+  background-color: $strongCyan;
+  color: $darkCyan;
+  font-family: $spaceMonoBold;
 }
