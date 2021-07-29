@@ -2,12 +2,25 @@ import React from 'react';
 import './_number-of-people.scss';
 
 const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
+  let personInputStyle = 'person-input';
+  let errorText = '';
+
+  if (numberOfPeople === '0') {
+    errorText = 'error-text';
+    numberOfPeople = '';
+    personInputStyle = 'person-input person-input-error';
+  } else {
+    personInputStyle = 'person-input';
+    errorText = 'error-text display-none';
+  }
+
   return (
     <div className="person-input-container">
       <div className="person-text-box">
         <label className="person-text" htmlFor="person-input">
           Number of People
         </label>
+        <span className={errorText}>Can't be zero</span>
       </div>
       <div className="person-input-box">
         <svg
@@ -26,7 +39,7 @@ const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
           type="number"
           id="person-input"
           value={numberOfPeople}
-          className="person-input"
+          className={personInputStyle}
           onChange={(e) => setNumOfPeople(e.target.value)}
           placeholder="0"
         />
@@ -35,4 +48,4 @@ const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
   );
 };
 
-export default NumberOfPeople;
+export default React.memo(NumberOfPeople);
