@@ -1,9 +1,15 @@
-@import "../../sass/abstracts/variables";
+@import "../../sass/abstracts/variables", "../../sass/layout/media-queries.scss";
 
 .person-text-box {
   padding-bottom: .5rem;
   // padding-top: 2.3rem
   padding-top: .5rem;
+  display: flex;
+  justify-content: space-between;
+
+    @include mobileMd {
+    padding-top: 1.2rem;
+  }
 }
 
 .person-text {
@@ -14,6 +20,10 @@
 
 .person-input-box {
   position: relative;
+
+    @include mobileMd {
+    margin-bottom: 1rem;
+  }
 }
 
 .person-input {
@@ -32,6 +42,11 @@
 
   &:focus {
     border-color: $strongCyan;
+  }
+
+  @include mobileMd {
+    padding: 1rem .7rem;
+    font-size: 1.3rem;
   }
 }
 

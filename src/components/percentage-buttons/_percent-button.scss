@@ -1,4 +1,4 @@
-@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/variables', "../../sass/layout/media-queries.scss";
 
 
 .percent-button-container {
@@ -17,7 +17,6 @@
     border-radius: 5px;
     text-align: right;
     font-family: $spaceMonoBold;
-    // font-size: 1.2rem;
     font-size: 1rem;
     border: 2px solid transparent;
     border-radius: 5px;
@@ -25,20 +24,22 @@
     top: 3px;
     height: 1.8rem;
 
-  &:focus {
-    border-color: $strongCyan;
-  }
-
-  &::placeholder {
-   margin-right: .5rem;
-}
+    &:focus {
+      border-color: $strongCyan;
     }
+
+    &::placeholder {
+      margin-right: .5rem;
+    }
+
+    @include mobileMd {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 .buttons {
-  // padding: .8rem 0;
   padding: .4rem 0;
-  // margin: .5rem 0;
   margin: .2rem 0;
   width: 46%;
   color: $white;
@@ -46,10 +47,15 @@
   border: 0;
   outline: 0;
   border-radius: 5px;
-  // font-size: 1.2rem;
   font-size: 1rem;
   font-family: $spaceMono;
   cursor: pointer;
+
+  @include mobileMd {
+    padding: .6rem 0;
+    // margin: .5rem 0;
+    font-size: 1.2rem;
+  }
 }
 
 .select-header {
@@ -58,6 +64,10 @@
   padding-top: .7rem;
   padding-bottom: .7rem;
   display: block;
+
+  @include mobileMd {
+    padding-top: 1.2rem;
+  }
 }
 
 .selected-percent {
