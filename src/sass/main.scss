@@ -1,9 +1,8 @@
-@import './abstracts/_variables', './base/fonts', './base/reset';
+@import './abstracts/_variables', './base/fonts', './base/reset', "./layout/media-queries.scss";
 
 body {
   background-color: $primaryBackground;
   font-family: $spaceMono;
-  overflow-y: hidden;
 }
 
 .content-container {
@@ -22,9 +21,14 @@ body {
 
 .total-container {
   width: 86%;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: .4rem auto;
   background-color: $darkCyan;
+  display: block;
+
+  @include mobileMd {
+    padding: .5rem 0;
+  }
 }
 
 .tip-per-container {
@@ -36,6 +40,10 @@ body {
   width: 90%;
   margin: auto;
   padding: 1rem .5rem;
+
+   @include mobileLg {
+    padding: 1rem .8rem;
+  }
 }
 
 input::-webkit-outer-spin-button,
@@ -46,4 +54,14 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.spacer {
+  height: 1rem;
+  width: 100%;
+  display: none;
+
+  @include mobileLg {
+    display: block;
+  }
 }
