@@ -10,6 +10,10 @@
   @include mobileMd {
     padding-top: 1rem
   }
+
+  @include mobileLg {
+    padding-top: 2rem;
+  }
 }
 
 .bill-text {
@@ -17,7 +21,7 @@
   font-family: $spaceMonoBold;
 
   @include mobileMd {
-      // font-size: 1.2rem;
+      font-size: 1.2rem;
   }
 }
 
@@ -64,11 +68,13 @@
   }
 }
 
-.error-text {
-  font-size: .9rem;
-  color: firebrick;
-  margin-left: .4rem;
-}
+// .error-text {
+//   font-size: .9rem;
+//   color: firebrick;
+//   margin-left: .4rem;
+
+
+// }
 
 .display-none {
   display: none;

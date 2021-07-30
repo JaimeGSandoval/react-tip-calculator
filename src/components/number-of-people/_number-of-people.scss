@@ -10,12 +10,22 @@
     @include mobileMd {
     padding-top: 1.2rem;
   }
+
+    @include mobileLg {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .person-text {
   color: $darkCyan;
   font-family: $spaceMonoBold;
   font-size: .9rem;
+
+  @include mobileLg {
+    font-size: 1.2rem;
+    padding-top: 1rem;
+  }
 }
 
 .person-input-box {
@@ -62,6 +72,10 @@
   font-size: .9rem;
   color: firebrick;
   margin-left: .4rem;
+
+    @include mobileLg {
+    font-size: 1.1rem;
+  }
 }
 
 .display-none {

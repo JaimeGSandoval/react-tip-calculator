@@ -10,10 +10,9 @@
   width: 100%;
   display: block;
 
-    @include tablet {
+  @include mobileLg {
     font-size: 1.4rem;
   }
-
 }
 
 header {
@@ -22,12 +21,16 @@ header {
   @include mobileMd {
     padding: 1.5rem 0;
   }
+
+  @include mobileLg {
+    padding: 1.6rem 0;
+  }
 }
 
 header span:nth-child(1)  {
   padding-bottom: 0.4rem;
 
-  // @include mobileMd {
-  //   padding-bottom: 0.7rem;
-  // }
+  @include mobileMd {
+    padding-bottom: 0.7rem;
+  }
 }

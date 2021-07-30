@@ -1,4 +1,4 @@
-@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/variables', "../../sass/layout/media-queries.scss";
 
 .text-box {
   display: flex;
@@ -10,16 +10,29 @@
 .span-1 {
   color: $white;
   font-family: $spaceMono;
+
+  @include mobileLg {
+    font-size: 1.2rem;
+    padding: .7rem 0;
+  }
 }
 
 .span-2 {
   color: $darkerGrayCyan;
   font-family: $spaceMono;
+
+  @include mobileLg {
+    font-size: 1.2rem;
+  }
 }
 
 .tip-amount {
   color: $strongCyan;
   font-size: 1.5rem;
   padding-top: .2rem;
-  font-family: $spaceMonoBold
+  font-family: $spaceMonoBold;
+
+  @include mobileLg {
+    padding-top: .7rem;
+  }
 }
