@@ -17,6 +17,10 @@
 .bill-text {
   color: $darkCyan;
   font-family: $spaceMonoBold;
+
+  @include mobileLg {
+     font-size: 1.3rem;
+  }
 }
 
 .bill-input-box {
@@ -42,6 +46,11 @@
 
   @include mobileMd {
     font-size: 1.2rem;
+  }
+
+  @include mobileLg {
+    padding: 1.3rem .7rem;
+    font-size: 1.4rem;
   }
 }
 

@@ -18,6 +18,10 @@
   color: $darkCyan;
   font-family: $spaceMonoBold;
   font-size: .9rem;
+
+  @include mobileLg {
+    font-size: 1.3rem;
+  }
 }
 
 .person-input-box {
@@ -44,6 +48,11 @@
 
   @include mobileMd {
     font-size: 1.2rem;
+  }
+
+  @include mobileLg {
+    padding: 1.3rem .7rem;
+    font-size: 1.4rem;
   }
 }
 

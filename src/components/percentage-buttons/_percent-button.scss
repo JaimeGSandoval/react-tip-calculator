@@ -35,6 +35,11 @@
       padding: .5rem 0;
       font-size: 1.2rem;
     }
+
+    @include mobileLg {
+      padding: 1.4rem 0;
+      font-size: 1.4rem;
+    }
   }
 }
 
@@ -56,6 +61,11 @@
     padding: .6rem 0;
     margin: .3rem 0;
   }
+
+  @include mobileLg {
+    font-size: 1.4rem;
+    padding: .7rem 0;
+  }
 }
 
 .select-header {
@@ -67,6 +77,10 @@
 
   @include mobileMd {
     padding-top: 1rem;;
+  }
+
+  @include mobileLg {
+    font-size: 1.3rem;
   }
 }
 

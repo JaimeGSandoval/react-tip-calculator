@@ -24,6 +24,11 @@
     font-size: 1rem;
     // padding: .4rem 0;
   }
+
+  @include mobileLg {
+    font-size: 1.3rem;
+    padding-bottom: 7px;
+  }
 }
 
 .span-2 {
