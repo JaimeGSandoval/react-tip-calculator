@@ -5,25 +5,24 @@
   flex-direction: column;
   line-height: 22px;
   margin-bottom: .5rem;
+
+  @include mobileMd {
+      // padding: .4rem 0;
+  }
 }
 
 .span-1 {
   color: $white;
   font-family: $spaceMono;
 
-  @include mobileLg {
-    font-size: 1.2rem;
-    padding: .7rem 0;
+  @include mobileMd {
+    font-size: 1rem;
   }
 }
 
 .span-2 {
   color: $darkerGrayCyan;
   font-family: $spaceMono;
-
-  @include mobileLg {
-    font-size: 1.2rem;
-  }
 }
 
 .tip-amount {
@@ -31,8 +30,4 @@
   font-size: 1.5rem;
   padding-top: .2rem;
   font-family: $spaceMonoBold;
-
-  @include mobileLg {
-    padding-top: .7rem;
-  }
 }
