@@ -6,7 +6,7 @@ import NumberOfPeople from './components/number-of-people/NumberOfPeople';
 import TipPerPerson from './components/tip-per-person/TipPerPerson';
 import TipTotal from './components/tip-total/TipTotal';
 import ResetButton from './components/reset-button/ResetButton';
-import currencyFormatter from './utils/currency-formatter';
+import currencyFormatter from './utils/utility-functions';
 import './sass/main.scss';
 
 function App() {
@@ -102,7 +102,6 @@ function App() {
             <ResetButton resetTipAmounts={resetTipAmounts} />
           </div>
         </section>
-        {/* <div className="spacer"></div> */}
       </div>
     </>
   );

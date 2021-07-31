@@ -1,11 +1,15 @@
 import React from 'react';
 import './_bill-input.scss';
+import {
+  preventMinus,
+  preventPasteNegative,
+} from '../../utils/utility-functions';
 
 const BillInput = ({ billAmount, setBill }) => {
   let billInputStyle = 'bill-input';
   let errorText = '';
 
-  if (billAmount === '0') {
+  if (billAmount === '0' || billAmount === '-') {
     billAmount = '';
     errorText = 'error-text';
     billInputStyle = 'bill-input bill-input-error';
@@ -42,6 +46,8 @@ const BillInput = ({ billAmount, setBill }) => {
           id="bill-input"
           className={billInputStyle}
           placeholder={'0.00'}
+          onKeyPress={preventMinus}
+          onPaste={preventPasteNegative}
         />
       </div>
     </div>

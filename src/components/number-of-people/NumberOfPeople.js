@@ -1,5 +1,9 @@
 import React from 'react';
 import './_number-of-people.scss';
+import {
+  preventMinus,
+  preventPasteNegative,
+} from '../../utils/utility-functions';
 
 const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
   let personInputStyle = 'person-input';
@@ -42,6 +46,8 @@ const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
           className={personInputStyle}
           onChange={(e) => setNumOfPeople(e.target.value)}
           placeholder="0"
+          onKeyPress={preventMinus}
+          onPaste={preventPasteNegative}
         />
       </div>
     </div>
