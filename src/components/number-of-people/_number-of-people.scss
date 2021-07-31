@@ -8,10 +8,13 @@
 
 .person-text-box {
   padding-bottom: .5rem;
-  // padding-top: 2.3rem
   padding-top: .5rem;
   display: flex;
   justify-content: space-between;
+
+  @include mobileLg {
+    padding-top: .2rem;
+  }
 }
 
 .person-text {
