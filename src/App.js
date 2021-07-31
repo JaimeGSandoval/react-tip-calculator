@@ -102,7 +102,7 @@ function App() {
             <ResetButton resetTipAmounts={resetTipAmounts} />
           </div>
         </section>
-        <div className="spacer"></div>
+        {/* <div className="spacer"></div> */}
       </div>
     </>
   );

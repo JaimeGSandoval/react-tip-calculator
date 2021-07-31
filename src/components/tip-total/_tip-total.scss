@@ -3,6 +3,10 @@
 .text-box {
   display: flex;
   flex-direction: column;
+
+  @include mobileMd {
+    margin-bottom: 1rem;
+  }
 }
 
 .tip-total {
@@ -10,15 +14,21 @@
   color: $strongCyan;
   padding-top: .2rem;
   font-family: $spaceMonoBold;
-
-   @include mobileLg {
-    padding-top: .7rem;
-  }
 }
 
 .span-1 {
   color: $white;
   font-family: $spaceMono;
+
+  @include mobileMd {
+    font-size: 1rem;
+    // padding: .4rem 0;
+  }
+
+  @include mobileLg {
+    font-size: 1.3rem;
+    padding-bottom: 7px;
+  }
 }
 
 .span-2 {

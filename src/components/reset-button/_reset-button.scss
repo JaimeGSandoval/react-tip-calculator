@@ -14,9 +14,8 @@ button {
   font-family: $spaceMonoBold;
   font-size: 1.2rem;
 
-   @include mobileLg {
-    margin-top: 1.5rem;
-    padding: 1rem 0;
+  @include mobileLg {
     font-size: 1.5rem;
+    padding: .8rem 0;
   }
 }

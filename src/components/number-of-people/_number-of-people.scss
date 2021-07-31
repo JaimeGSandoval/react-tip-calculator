@@ -1,20 +1,17 @@
 @import "../../sass/abstracts/variables", "../../sass/layout/media-queries.scss";
 
+.person-input-container {
+  @include mobileMd {
+    padding-top: .7rem;
+  }
+}
+
 .person-text-box {
   padding-bottom: .5rem;
   // padding-top: 2.3rem
   padding-top: .5rem;
   display: flex;
   justify-content: space-between;
-
-    @include mobileMd {
-    padding-top: 1.2rem;
-  }
-
-    @include mobileLg {
-    display: flex;
-    align-items: baseline;
-  }
 }
 
 .person-text {
@@ -23,17 +20,12 @@
   font-size: .9rem;
 
   @include mobileLg {
-    font-size: 1.2rem;
-    padding-top: 1rem;
+    font-size: 1.3rem;
   }
 }
 
 .person-input-box {
   position: relative;
-
-    @include mobileMd {
-    margin-bottom: 1rem;
-  }
 }
 
 .person-input {
@@ -55,8 +47,12 @@
   }
 
   @include mobileMd {
-    padding: 1rem .7rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  @include mobileLg {
+    padding: 1.3rem .7rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -72,10 +68,6 @@
   font-size: .9rem;
   color: firebrick;
   margin-left: .4rem;
-
-    @include mobileLg {
-    font-size: 1.1rem;
-  }
 }
 
 .display-none {

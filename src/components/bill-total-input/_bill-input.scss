@@ -1,27 +1,25 @@
 @import "../../sass/abstracts/variables", "../../sass/layout/media-queries.scss";
 
+.bill-input-container {
+  @include mobileMd {
+    padding-top: .7rem;
+  }
+}
+
 .bill-text-box {
   padding-bottom: .5rem;
   padding-top: .5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @include mobileMd {
-    padding-top: 1rem
-  }
-
-  @include mobileLg {
-    padding-top: 2rem;
-  }
 }
 
 .bill-text {
   color: $darkCyan;
   font-family: $spaceMonoBold;
 
-  @include mobileMd {
-      font-size: 1.2rem;
+  @include mobileLg {
+     font-size: 1.3rem;
   }
 }
 
@@ -47,8 +45,12 @@
   }
 
   @include mobileMd {
-    padding: 1rem .7rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  @include mobileLg {
+    padding: 1.3rem .7rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -56,10 +58,6 @@
   position: absolute;
   top: 9px;
   left: 10px;
-
-  @include mobileMd {
-    top: .9rem;
-  }
 }
 
 .bill-input-error {
@@ -67,14 +65,6 @@
     border-color: firebrick;
   }
 }
-
-// .error-text {
-//   font-size: .9rem;
-//   color: firebrick;
-//   margin-left: .4rem;
-
-
-// }
 
 .display-none {
   display: none;
