@@ -1,13 +1,11 @@
 @import '../../sass/abstracts/variables', "../../sass/layout/media-queries.scss";
 
-
 .percent-button-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
-    input {
-    padding: .4rem 0;
+  input {
     margin: .2rem 0;
     width: 46%;
     color: $darkCyan;
@@ -21,7 +19,8 @@
     border: 2px solid transparent;
     border-radius: 5px;
     position: relative;
-    top: 3px;
+    top: 1px;
+    height: 35px;
 
     &:focus {
       border-color: $strongCyan;
@@ -31,20 +30,36 @@
       margin-right: .5rem;
     }
 
-    @include mobileMd {
+    @include mobileSm {
       padding: .5rem 0;
       font-size: 1.2rem;
+      top: 2px;
+      height: 38px;
     }
 
-    @include mobileLg {
-      padding: 1.4rem 0;
+    @include mobileMed {
+      height: 45px;
       font-size: 1.4rem;
     }
+
+    @include mobileXl {
+      top: 6px;
+      height: 45px;
+    }
+
+    @include mobileXXl {
+      height: 50px;
+      top: 8px;
+    }
+
+    @include desktopSm {
+      width: 26%;
+   }
   }
 }
 
 .buttons {
-  padding: .4rem 0;
+  // padding: .4rem 0;
   margin: .2rem 0;
   width: 46%;
   color: $white;
@@ -56,15 +71,34 @@
   font-family: $spaceMono;
   cursor: pointer;
 
-  @include mobileMd {
+  @include mobileSm {
     font-size: 1.2rem;
     padding: .6rem 0;
     margin: .3rem 0;
   }
 
-  @include mobileLg {
+  @include mobileMed {
     font-size: 1.4rem;
     padding: .7rem 0;
+  }
+
+  @include mobileLg {
+    font-size: 1.4rem;
+    margin-bottom: .6rem;
+  }
+
+  @include mobileXl {
+    padding: .8rem 0;
+    margin: .5rem 0;
+  }
+
+  @include mobileXXl {
+    padding: 1rem 0;
+    margin: .6rem 0;
+  }
+
+  @include desktopSm {
+    width: 26%;
   }
 }
 
@@ -75,12 +109,26 @@
   padding-bottom: .7rem;
   display: block;
 
-  @include mobileMd {
+  @include mobileSm {
     padding-top: 1rem;;
   }
 
-  @include mobileLg {
+  @include mobileMed {
     font-size: 1.3rem;
+  }
+
+  @include mobileLg {
+    padding-top: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  @include mobileXl {
+    padding-top: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  @include mobileXXl {
+    padding-top: 1.8rem;
   }
 }
 

@@ -1,5 +1,9 @@
 import React from 'react';
 import './_percent-button.scss';
+import {
+  preventMinus,
+  preventPasteNegative,
+} from '../../utils/utility-functions';
 
 const Button = ({ percentage, getPercent, buttonStyles }) => {
   return (
@@ -41,11 +45,13 @@ const PercentButtons = ({
           );
         })}
         <input
-          className="person-input"
           type="number"
           value={customPercent}
           onChange={(e) => setCustomPercent(e.target.value)}
           placeholder="Custom"
+          onKeyPress={preventMinus}
+          onPaste={preventPasteNegative}
+          min="0"
         />
       </div>
     </>

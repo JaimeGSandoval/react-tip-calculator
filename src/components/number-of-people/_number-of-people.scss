@@ -1,17 +1,29 @@
 @import "../../sass/abstracts/variables", "../../sass/layout/media-queries.scss";
 
 .person-input-container {
-  @include mobileMd {
+  @include mobileSm {
     padding-top: .7rem;
+  }
+
+  @include mobileLg {
+    padding-bottom: .5rem;
   }
 }
 
 .person-text-box {
   padding-bottom: .5rem;
-  // padding-top: 2.3rem
   padding-top: .5rem;
   display: flex;
   justify-content: space-between;
+
+  @include mobileMed {
+    padding-top: .2rem;
+  }
+
+  @include mobileLg {
+    padding-top: .5rem;
+    padding-bottom: .8rem;
+  }
 }
 
 .person-text {
@@ -19,7 +31,15 @@
   font-family: $spaceMonoBold;
   font-size: .9rem;
 
+  @include mobileMed {
+    font-size: 1.3rem;
+  }
+
   @include mobileLg {
+    font-size: 1.2rem;
+  }
+
+  @include mobileXl {
     font-size: 1.3rem;
   }
 }
@@ -30,7 +50,7 @@
 
 .person-input {
   width: 100%;
-  height: 2.5rem;
+  height: 2.2rem;
   // padding: 1.5rem .7rem;
   padding: .7rem .7rem;
   background-color: $lightGrayCyan;
@@ -46,21 +66,30 @@
     border-color: $strongCyan;
   }
 
-  @include mobileMd {
+  @include mobileSm {
     font-size: 1.2rem;
+    height: 2.5rem;
+    padding: 1.3rem .7rem;
   }
 
-  @include mobileLg {
-    padding: 1.3rem .7rem;
+  @include mobileMed {
+    // padding: 1.3rem .7rem;
     font-size: 1.4rem;
+  }
+
+  @include mobileXl {
+    height: 2.8rem;
   }
 }
 
 .person-svg {
   position: absolute;
-  // top: 13px;
-  top: 11px;
   left: 10px;
+  top: 25%;
+
+  @include mobileSm {
+    top: 29%;
+  }
 }
 
 

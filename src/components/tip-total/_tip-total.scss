@@ -4,8 +4,12 @@
   display: flex;
   flex-direction: column;
 
-  @include mobileMd {
+  @include mobileSm {
     margin-bottom: 1rem;
+  }
+
+  @include mobileLg {
+    margin-bottom: 2rem;
   }
 }
 
@@ -14,20 +18,41 @@
   color: $strongCyan;
   padding-top: .2rem;
   font-family: $spaceMonoBold;
+
+    @include mobileMed {
+    font-size: 1.9rem;
+  }
+
+  @include mobileLg {
+    font-size: 1.8rem;
+  }
+
+  @include mobileXl {
+    font-size: 1.7rem;
+  }
+
 }
 
 .span-1 {
   color: $white;
   font-family: $spaceMono;
 
-  @include mobileMd {
+  @include mobileSm {
     font-size: 1rem;
     // padding: .4rem 0;
   }
 
-  @include mobileLg {
+  @include mobileMed {
     font-size: 1.3rem;
     padding-bottom: 7px;
+  }
+
+  @include mobileLg {
+    font-size: 1.2rem;
+  }
+
+  @include mobileXl {
+    font-size: 1.4rem;
   }
 }
 

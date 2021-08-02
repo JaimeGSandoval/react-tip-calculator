@@ -1,9 +1,13 @@
 @import '../../sass/abstracts/variables', '../../sass/layout/media-queries';
 
 header {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 
-  @include mobileMd {
+  @include mobileSm {
+    padding: 1.2rem 0;
+  }
+
+  @include mobileXl {
     padding: 1.8rem 0;
   }
 }
@@ -18,7 +22,11 @@ header {
   width: 100%;
   display: block;
 
-  @include mobileLg {
+  @include mobileMed {
+    font-size: 1.4rem;
+  }
+
+  @include mobileXXl {
     font-size: 1.4rem;
   }
 }
