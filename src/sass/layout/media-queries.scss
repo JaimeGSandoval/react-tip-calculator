@@ -1,5 +1,45 @@
+@mixin mobileSm {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mobileMed {
+  @media (min-width: 414px) {
+    @content;
+  }
+}
+
+@mixin mobileLg {
+  @media only screen
+    and (width : 375px)
+    and (height : 812px)
+    and (-webkit-device-pixel-ratio : 3) {
+      @content;
+    }
+}
+
+@mixin mobileXl {
+  @media (min-width: 390px) and (min-height: 844px) {
+    @content;
+  }
+}
+
+
+@mixin mobileXXl {
+  @media (min-width: 414px) and (min-height: 896px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktopSm {
+  @media (min-width: 992px) {
     @content;
   }
 }

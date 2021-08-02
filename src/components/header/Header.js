@@ -4,8 +4,7 @@ import './_header.scss';
 const Header = () => {
   return (
     <header>
-      <span className="header-text">spli</span>
-      <span className="header-text">tter</span>
+      <span className="header-text">tip right</span>
     </header>
   );
 };
