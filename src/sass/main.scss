@@ -46,6 +46,10 @@ body {
   @include mobileXl {
     margin-top: .7rem;
   }
+
+  @include mobileXXl {
+    margin-top: .2rem;
+  }
 }
 
 .tip-per-container {
@@ -94,4 +98,11 @@ input[type='number'] {
   @include mobileMed {
     display: block;
   }
+}
+
+// media query for pro max 12
+@media (min-width: 428px) and (min-height: 926px) {
+   .total-container {
+     margin-top: 0;
+   }
 }
