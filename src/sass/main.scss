@@ -12,7 +12,7 @@ body {
   padding: 0;
   width: 100vw;
   max-width: 100%;
-  height: 100vh;
+  height: 90vh;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 
@@ -23,16 +23,17 @@ body {
 
 .main-container {
   width: 84%;
-  height: 56%;
+  // height: 56%;
+  height: 62%;
   margin: auto;
 
-  @include mobileXl {
-    height: 53%;
-  }
+  // @include mobileXl {
+  //   height: 53%;
+  // }
 
-  @include mobileXXl {
-    height: 56%;
-  }
+  // @include mobileXXl {
+  //   height: 56%;
+  // }
 }
 
 .total-container {
@@ -41,15 +42,15 @@ body {
   margin: auto;
   background-color: $darkCyan;
   display: block;
-  height: 33%;
+  height: 37%;
 
-  @include mobileXl {
-    margin-top: .7rem;
-  }
+  // @include mobileXl {
+  //   margin-top: .7rem;
+  // }
 
-  @include mobileXXl {
-    margin-top: .2rem;
-  }
+  // @include mobileXXl {
+  //   margin-top: .2rem;
+  // }
 }
 
 .tip-per-container {

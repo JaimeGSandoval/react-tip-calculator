@@ -13,8 +13,7 @@
 @mixin mobileLg {
   @media only screen
     and (width : 375px)
-    and (height : 812px)
-    and (-webkit-device-pixel-ratio : 3) {
+    and (height : 812px) {
       @content;
     }
 }
