@@ -2,6 +2,7 @@
 
 header {
   padding: 1rem 0;
+  height: 10vh;
 
   @include mobileSm {
     padding: 1.2rem 0;
@@ -18,7 +19,8 @@ header {
   text-transform: uppercase;
   letter-spacing: 7px;
   font-family: 'Space Mono Bold';
-  color: $darkCyan;
+  // color: $darkCyan;
+  color: firebrick;
   width: 100%;
   display: block;
 
