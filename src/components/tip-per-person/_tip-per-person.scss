@@ -1,24 +1,57 @@
-@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/variables', "../../sass/layout/media-queries.scss";
 
 .text-box {
   display: flex;
   flex-direction: column;
   line-height: 22px;
   margin-bottom: .5rem;
+
+  @include mobileSm {
+      // padding: .4rem 0;
+  }
 }
 
 .span-1 {
   color: $white;
   font-family: $spaceMono;
+
+  @include mobileSm {
+    font-size: 1rem;
+  }
+
+  @include mobileMed {
+    font-size: 1.3rem;
+  }
+
+  @include mobileLg {
+    font-size: 1.2rem;
+  }
 }
 
 .span-2 {
   color: $darkerGrayCyan;
   font-family: $spaceMono;
+
+  @include mobileMed {
+    font-size: 1.2rem;
+  }
 }
 
 .tip-amount {
   color: $strongCyan;
   font-size: 1.5rem;
   padding-top: .2rem;
+  font-family: $spaceMonoBold;
+
+  @include mobileMed {
+    font-size: 1.9rem;
+  }
+
+  @include mobileLg {
+    font-size: 1.8rem;
+  }
+
+  @include mobileXl {
+    font-size: 1.7rem;
+  }
 }
