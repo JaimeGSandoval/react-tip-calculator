@@ -48,6 +48,7 @@ const NumberOfPeople = ({ numberOfPeople, setNumOfPeople }) => {
           placeholder="0"
           onKeyPress={preventMinus}
           onPaste={preventPasteNegative}
+          min="0"
         />
       </div>
     </div>

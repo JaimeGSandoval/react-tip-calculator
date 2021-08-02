@@ -5,7 +5,11 @@
     padding-top: .7rem;
   }
 
-  @include mobileLg {
+  @include mobileXl {
+    padding-top: 1rem;
+  }
+
+  @include mobileXXl {
     padding-top: 1rem;
   }
 }
@@ -16,6 +20,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include mobileXl {
+    font-size: 1.3rem;
+  }
+
+  @include mobileXXl {
+    padding-top: 1.3rem;
+  }
 }
 
 .bill-text {
@@ -26,7 +38,7 @@
      font-size: 1.3rem;
   }
 
-  @include mobileLg {
+  @include mobileXXl {
     font-size: 1.2rem;
   }
 }
@@ -61,6 +73,16 @@
   @include mobileMed {
     padding: 1.3rem .7rem;
     font-size: 1.4rem;
+  }
+
+  @include mobileXl {
+    height: 2.8rem;
+  }
+
+  @include mobileXXl {
+    font-size: 1.2rem;
+    height: 2.5rem;
+    padding: 1.3rem .7rem;
   }
 }
 

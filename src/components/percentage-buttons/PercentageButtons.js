@@ -45,13 +45,13 @@ const PercentButtons = ({
           );
         })}
         <input
-          // className="person-input"
           type="number"
           value={customPercent}
           onChange={(e) => setCustomPercent(e.target.value)}
           placeholder="Custom"
           onKeyPress={preventMinus}
           onPaste={preventPasteNegative}
+          min="0"
         />
       </div>
     </>

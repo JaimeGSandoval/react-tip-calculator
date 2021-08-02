@@ -29,4 +29,12 @@ button {
   @include mobileLg {
     font-size: 1.4rem;
   }
+
+  @include mobileXl {
+    margin-top: 1.7rem;
+  }
+
+  @include mobileXXl {
+    margin-top: 1.2rem;
+  }
 }

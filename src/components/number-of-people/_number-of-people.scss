@@ -38,6 +38,10 @@
   @include mobileLg {
     font-size: 1.2rem;
   }
+
+  @include mobileXl {
+    font-size: 1.3rem;
+  }
 }
 
 .person-input-box {
@@ -71,6 +75,10 @@
   @include mobileMed {
     // padding: 1.3rem .7rem;
     font-size: 1.4rem;
+  }
+
+  @include mobileXl {
+    height: 2.8rem;
   }
 }
 

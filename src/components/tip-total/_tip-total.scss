@@ -27,6 +27,10 @@
     font-size: 1.8rem;
   }
 
+  @include mobileXl {
+    font-size: 1.7rem;
+  }
+
 }
 
 .span-1 {
@@ -43,8 +47,12 @@
     padding-bottom: 7px;
   }
 
-    @include mobileLg {
+  @include mobileLg {
     font-size: 1.2rem;
+  }
+
+  @include mobileXl {
+    font-size: 1.4rem;
   }
 }
 

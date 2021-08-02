@@ -50,4 +50,8 @@
   @include mobileLg {
     font-size: 1.8rem;
   }
+
+  @include mobileXl {
+    font-size: 1.7rem;
+  }
 }

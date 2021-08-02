@@ -19,6 +19,19 @@
     }
 }
 
+@mixin mobileXl {
+  @media (min-width: 390px) and (min-height: 844px) {
+    @content;
+  }
+}
+
+
+@mixin mobileXXl {
+  @media (min-width: 414px) and (min-height: 896px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: 768px) {
     @content;

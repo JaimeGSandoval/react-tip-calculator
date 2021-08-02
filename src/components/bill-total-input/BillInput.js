@@ -48,6 +48,7 @@ const BillInput = ({ billAmount, setBill }) => {
           placeholder={'0.00'}
           onKeyPress={preventMinus}
           onPaste={preventPasteNegative}
+          min="0"
         />
       </div>
     </div>
