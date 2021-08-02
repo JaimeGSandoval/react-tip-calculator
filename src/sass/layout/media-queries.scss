@@ -1,17 +1,32 @@
-@mixin mobileMd {
+@mixin mobileSm {
   @media (min-width: 375px) {
     @content;
   }
 }
 
-@mixin mobileLg {
+@mixin mobileMed {
   @media (min-width: 414px) {
     @content;
   }
 }
 
+@mixin mobileLg {
+  @media only screen
+    and (width : 375px)
+    and (height : 812px)
+    and (-webkit-device-pixel-ratio : 3) {
+      @content;
+    }
+}
+
 @mixin tablet {
   @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktopSm {
+  @media (min-width: 992px) {
     @content;
   }
 }

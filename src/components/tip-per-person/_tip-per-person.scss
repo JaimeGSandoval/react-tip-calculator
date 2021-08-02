@@ -6,7 +6,7 @@
   line-height: 22px;
   margin-bottom: .5rem;
 
-  @include mobileMd {
+  @include mobileSm {
       // padding: .4rem 0;
   }
 }
@@ -15,12 +15,16 @@
   color: $white;
   font-family: $spaceMono;
 
-  @include mobileMd {
+  @include mobileSm {
     font-size: 1rem;
   }
 
-  @include mobileLg {
+  @include mobileMed {
     font-size: 1.3rem;
+  }
+
+  @include mobileLg {
+    font-size: 1.2rem;
   }
 }
 
@@ -28,7 +32,7 @@
   color: $darkerGrayCyan;
   font-family: $spaceMono;
 
-  @include mobileLg {
+  @include mobileMed {
     font-size: 1.2rem;
   }
 }
@@ -39,7 +43,11 @@
   padding-top: .2rem;
   font-family: $spaceMonoBold;
 
-  @include mobileLg {
+  @include mobileMed {
     font-size: 1.9rem;
+  }
+
+  @include mobileLg {
+    font-size: 1.8rem;
   }
 }

@@ -1,4 +1,5 @@
-@import './abstracts/_variables', './base/fonts', './base/reset', "./layout/media-queries.scss";
+@import './abstracts/_variables', './base/fonts', './base/reset',
+  './layout/media-queries.scss';
 
 body {
   background-color: $primaryBackground;
@@ -14,24 +15,25 @@ body {
   height: 100vh;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+
+  @include desktopSm {
+    display: flex;
+  }
 }
 
 .main-container {
   width: 84%;
+  height: 56%;
   margin: auto;
 }
 
 .total-container {
   width: 86%;
   border-radius: 10px;
-  margin: .4rem auto;
+  margin: auto;
   background-color: $darkCyan;
   display: block;
-
-  @include mobileMd {
-    margin-top: .8rem;
-    // padding: .45rem;
-  }
+  height: 33%;
 }
 
 .tip-per-container {
@@ -42,10 +44,14 @@ body {
 .inner-container {
   width: 90%;
   margin: auto;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
 
-  @include mobileMd {
-    padding: 1.4rem .5rem;
+  @include mobileSm {
+    padding: 1.6rem 0.5rem;
+  }
+
+  @include mobileLg {
+    padding: 2.4rem 0.5rem;
   }
 }
 
@@ -55,7 +61,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -65,7 +71,7 @@ input[type=number] {
   display: none;
   background-color: $white;
 
-  @include mobileLg {
+  @include mobileMed {
     display: block;
   }
 }

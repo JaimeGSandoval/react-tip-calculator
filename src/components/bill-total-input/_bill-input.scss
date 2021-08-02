@@ -1,8 +1,12 @@
 @import "../../sass/abstracts/variables", "../../sass/layout/media-queries.scss";
 
 .bill-input-container {
-  @include mobileMd {
+  @include mobileSm {
     padding-top: .7rem;
+  }
+
+  @include mobileLg {
+    padding-top: 1rem;
   }
 }
 
@@ -18,8 +22,12 @@
   color: $darkCyan;
   font-family: $spaceMonoBold;
 
-  @include mobileLg {
+  @include mobileMed {
      font-size: 1.3rem;
+  }
+
+  @include mobileLg {
+    font-size: 1.2rem;
   }
 }
 
@@ -29,8 +37,8 @@
 
 .bill-input {
   width: 100%;
-  height: 2.5rem;
-  padding: .7rem .7rem;
+  height: 2.2rem;
+  padding: .7rem;
   background-color: $lightGrayCyan;
   font-family: $spaceMonoBold;
   font-size: 1rem;
@@ -44,11 +52,13 @@
     border-color: $strongCyan;
   }
 
-  @include mobileMd {
+  @include mobileSm {
     font-size: 1.2rem;
+    height: 2.5rem;
+    padding-bottom: .6rem;
   }
 
-  @include mobileLg {
+  @include mobileMed {
     padding: 1.3rem .7rem;
     font-size: 1.4rem;
   }
@@ -56,8 +66,16 @@
 
 .dollar-svg {
   position: absolute;
-  top: 9px;
+  top: 24%;
   left: 10px;
+
+  @include mobileSm {
+    top: 26%;
+  }
+
+  @include mobileMed {
+    top: 27%
+  }
 }
 
 .bill-input-error {
