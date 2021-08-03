@@ -4,7 +4,9 @@ import './_reset-button.scss';
 const ResetButton = ({ resetTipAmounts }) => {
   return (
     <>
-      <button onClick={resetTipAmounts}>reset</button>
+      <button className="reset-button" onClick={resetTipAmounts}>
+        reset
+      </button>
     </>
   );
 };
