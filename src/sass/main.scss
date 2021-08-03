@@ -43,6 +43,7 @@ body {
   margin: auto;
   background-color: $darkCyan;
   display: block;
+  margin-top: .4rem;
   // height: 37%;
 
   // @include mobileXl {
@@ -57,20 +58,18 @@ body {
 .tip-per-container {
   display: flex;
   justify-content: space-between;
+  margin: .4rem 0;
 
-  // @include mobileXl {
-  //   margin-top: 1rem;;
-  // }
-
-  // @include mobileXXl {
-  //   margin-top: 1.1rem;
-  // }
+ @include mobileMed {
+   margin: 1rem 0;
+ }
 }
 
 .inner-container {
   width: 90%;
   margin: auto;
-  padding: 1rem 0.5rem;
+  padding: 1.5rem 0.5rem;
+  margin-top: 1.3rem;
 
   // @include mobileSm {
   //   padding: 1.6rem 0.5rem;
