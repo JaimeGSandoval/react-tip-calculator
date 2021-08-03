@@ -23,10 +23,6 @@
 .span-2 {
   color: $darkerGrayCyan;
   font-family: $spaceMono;
-
-  // @include mobileMed {
-  //   font-size: 1.2rem;
-  // }
 }
 
 .tip-amount {
@@ -35,7 +31,7 @@
   padding-top: .2rem;
   font-family: $spaceMonoBold;
 
-  @include mobileMed {
+  @include mobileXl {
     font-size: 1.5rem;
   }
 }
