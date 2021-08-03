@@ -30,27 +30,27 @@
       margin-right: .5rem;
     }
 
-    @include mobileSm {
-      padding: .5rem 0;
-      font-size: 1.2rem;
-      top: 2px;
-      height: 38px;
-    }
+    // @include mobileSm {
+    //   padding: .5rem 0;
+    //   font-size: 1.2rem;
+    //   top: 2px;
+    //   height: 38px;
+    // }
 
-    @include mobileMed {
-      height: 45px;
-      font-size: 1.4rem;
-    }
+    // @include mobileMed {
+    //   height: 45px;
+    //   font-size: 1.4rem;
+    // }
 
-    @include mobileXl {
-      top: 6px;
-      height: 45px;
-    }
+    // @include mobileXl {
+    //   top: 6px;
+    //   height: 45px;
+    // }
 
-    @include mobileXXl {
-      height: 50px;
-      top: 8px;
-    }
+    // @include mobileXXl {
+    //   height: 50px;
+    //   top: 8px;
+    // }
 
     @include desktopSm {
       width: 26%;
@@ -71,31 +71,31 @@
   font-family: $spaceMono;
   cursor: pointer;
 
-  @include mobileSm {
-    font-size: 1.2rem;
-    padding: .6rem 0;
-    margin: .3rem 0;
-  }
+  // @include mobileSm {
+  //   font-size: 1.2rem;
+  //   padding: .6rem 0;
+  //   margin: .3rem 0;
+  // }
 
-  @include mobileMed {
-    font-size: 1.4rem;
-    padding: .7rem 0;
-  }
+  // @include mobileMed {
+  //   font-size: 1.4rem;
+  //   padding: .7rem 0;
+  // }
 
-  @include mobileLg {
-    font-size: 1.4rem;
-    margin-bottom: .6rem;
-  }
+  // @include mobileLg {
+  //   font-size: 1.4rem;
+  //   margin-bottom: .6rem;
+  // }
 
-  @include mobileXl {
-    padding: .8rem 0;
-    margin: .5rem 0;
-  }
+  // @include mobileXl {
+  //   padding: .8rem 0;
+  //   margin: .5rem 0;
+  // }
 
-  @include mobileXXl {
-    padding: 1rem 0;
-    margin: .6rem 0;
-  }
+  // @include mobileXXl {
+  //   padding: 1rem 0;
+  //   margin: .6rem 0;
+  // }
 
   @include desktopSm {
     width: 26%;
@@ -109,27 +109,27 @@
   padding-bottom: .7rem;
   display: block;
 
-  @include mobileSm {
-    padding-top: 1rem;;
-  }
+  // @include mobileSm {
+  //   padding-top: 1rem;;
+  // }
 
-  @include mobileMed {
-    font-size: 1.3rem;
-  }
+  // @include mobileMed {
+  //   font-size: 1.3rem;
+  // }
 
-  @include mobileLg {
-    padding-top: 1.3rem;
-    font-size: 1.2rem;
-  }
+  // @include mobileLg {
+  //   padding-top: 1.3rem;
+  //   font-size: 1.2rem;
+  // }
 
-  @include mobileXl {
-    padding-top: 1.5rem;
-    font-size: 1.3rem;
-  }
+  // @include mobileXl {
+  //   padding-top: 1.5rem;
+  //   font-size: 1.3rem;
+  // }
 
-  @include mobileXXl {
-    padding-top: 1.8rem;
-  }
+  // @include mobileXXl {
+  //   padding-top: 1.8rem;
+  // }
 }
 
 .selected-percent {
