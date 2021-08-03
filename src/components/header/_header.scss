@@ -2,15 +2,16 @@
 
 header {
   padding: 1rem 0;
-  height: 10vh;
+  // height: 10vh;
+  background-color: $primaryBackground;
 
-  @include mobileSm {
-    padding: 1.2rem 0;
-  }
+  // @include mobileSm {
+  //   padding: 1.2rem 0;
+  // }
 
-  @include mobileXl {
-    padding: 1.8rem 0;
-  }
+  // @include mobileXl {
+  //   padding: 1.8rem 0;
+  // }
 }
 
 .header-text {
@@ -20,15 +21,15 @@ header {
   letter-spacing: 7px;
   font-family: 'Space Mono Bold';
   // color: $darkCyan;
-  color: firebrick;
+  color: blue;
   width: 100%;
   display: block;
 
-  @include mobileMed {
-    font-size: 1.4rem;
-  }
+  // @include mobileMed {
+  //   font-size: 1.4rem;
+  // }
 
-  @include mobileXXl {
-    font-size: 1.4rem;
-  }
+  // @include mobileXXl {
+  //   font-size: 1.4rem;
+  // }
 }

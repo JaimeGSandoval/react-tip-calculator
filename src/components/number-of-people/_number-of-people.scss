@@ -16,14 +16,14 @@
   display: flex;
   justify-content: space-between;
 
-  @include mobileMed {
-    padding-top: .2rem;
-  }
+  // @include mobileMed {
+  //   padding-top: .2rem;
+  // }
 
-  @include mobileLg {
-    padding-top: .5rem;
-    padding-bottom: .8rem;
-  }
+  // @include mobileLg {
+  //   padding-top: .5rem;
+  //   padding-bottom: .8rem;
+  // }
 }
 
 .person-text {
@@ -31,17 +31,17 @@
   font-family: $spaceMonoBold;
   font-size: .9rem;
 
-  @include mobileMed {
-    font-size: 1.3rem;
-  }
+  // @include mobileMed {
+  //   font-size: 1.3rem;
+  // }
 
-  @include mobileLg {
-    font-size: 1.2rem;
-  }
+  // @include mobileLg {
+  //   font-size: 1.2rem;
+  // }
 
-  @include mobileXl {
-    font-size: 1.3rem;
-  }
+  // @include mobileXl {
+  //   font-size: 1.3rem;
+  // }
 }
 
 .person-input-box {
@@ -66,20 +66,20 @@
     border-color: $strongCyan;
   }
 
-  @include mobileSm {
-    font-size: 1.2rem;
-    height: 2.5rem;
-    padding: 1.3rem .7rem;
-  }
+  // @include mobileSm {
+  //   font-size: 1.2rem;
+  //   height: 2.5rem;
+  //   padding: 1.3rem .7rem;
+  // }
 
-  @include mobileMed {
-    // padding: 1.3rem .7rem;
-    font-size: 1.4rem;
-  }
+  // @include mobileMed {
+  //   // padding: 1.3rem .7rem;
+  //   font-size: 1.4rem;
+  // }
 
-  @include mobileXl {
-    height: 2.8rem;
-  }
+  // @include mobileXl {
+  //   height: 2.8rem;
+  // }
 }
 
 .person-svg {
