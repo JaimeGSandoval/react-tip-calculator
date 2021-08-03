@@ -12,7 +12,6 @@ body {
   padding: 0;
   width: 100vw;
   max-width: 100%;
-  // height: 90vh;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 
@@ -23,18 +22,7 @@ body {
 
 .main-container {
   width: 84%;
-  // height: 56%;
-  // height: 62%;
-  // height: 50%;
   margin: auto;
-
-  // @include mobileXl {
-  //   height: 53%;
-  // }
-
-  // @include mobileXXl {
-  //   height: 56%;
-  // }
 }
 
 .total-container {
@@ -44,15 +32,7 @@ body {
   background-color: $darkCyan;
   display: block;
   margin-top: .4rem;
-  // height: 37%;
 
-  // @include mobileXl {
-  //   margin-top: .7rem;
-  // }
-
-  // @include mobileXXl {
-  //   margin-top: .2rem;
-  // }
 }
 
 .tip-per-container {
@@ -70,14 +50,6 @@ body {
   margin: auto;
   padding: 1.5rem 0.5rem;
   margin-top: 1.3rem;
-
-  // @include mobileSm {
-  //   padding: 1.6rem 0.5rem;
-  // }
-
-  // @include mobileLg {
-  //   padding: 2.4rem 0.5rem;
-  // }
 }
 
 input::-webkit-outer-spin-button,
@@ -89,10 +61,3 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
-
-// media query for pro max 12
-// @media (min-width: 428px) and (min-height: 926px) {
-//    .total-container {
-//      margin-top: 0;
-//    }
-// }
