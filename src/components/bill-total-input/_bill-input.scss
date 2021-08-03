@@ -1,17 +1,17 @@
 @import "../../sass/abstracts/variables", "../../sass/layout/media-queries.scss";
 
 .bill-input-container {
-  @include mobileSm {
-    padding-top: .7rem;
-  }
+  // @include mobileSm {
+  //   padding-top: .7rem;
+  // }
 
-  @include mobileXl {
-    padding-top: 1rem;
-  }
+  // @include mobileXl {
+  //   padding-top: 1rem;
+  // }
 
-  @include mobileXXl {
-    padding-top: 1rem;
-  }
+  // @include mobileXXl {
+  //   padding-top: 1rem;
+  // }
 }
 
 .bill-text-box {
@@ -21,26 +21,26 @@
   justify-content: space-between;
   align-items: center;
 
-  @include mobileXl {
-    font-size: 1.3rem;
-  }
+  // @include mobileXl {
+  //   font-size: 1.3rem;
+  // }
 
-  @include mobileXXl {
-    padding-top: 1.3rem;
-  }
+  // @include mobileXXl {
+  //   padding-top: 1.3rem;
+  // }
 }
 
 .bill-text {
   color: $darkCyan;
   font-family: $spaceMonoBold;
 
-  @include mobileMed {
-     font-size: 1.3rem;
-  }
+  // @include mobileMed {
+  //    font-size: 1.3rem;
+  // }
 
-  @include mobileXXl {
-    font-size: 1.2rem;
-  }
+  // @include mobileXXl {
+  //   font-size: 1.2rem;
+  // }
 }
 
 .bill-input-box {
@@ -64,26 +64,26 @@
     border-color: $strongCyan;
   }
 
-  @include mobileSm {
-    font-size: 1.2rem;
-    height: 2.5rem;
-    padding-bottom: .6rem;
-  }
+  // @include mobileSm {
+  //   font-size: 1.2rem;
+  //   height: 2.5rem;
+  //   padding-bottom: .6rem;
+  // }
 
-  @include mobileMed {
-    padding: 1.3rem .7rem;
-    font-size: 1.4rem;
-  }
+  // @include mobileMed {
+  //   padding: 1.3rem .7rem;
+  //   font-size: 1.4rem;
+  // }
 
-  @include mobileXl {
-    height: 2.8rem;
-  }
+  // @include mobileXl {
+  //   height: 2.8rem;
+  // }
 
-  @include mobileXXl {
-    font-size: 1.2rem;
-    height: 2.5rem;
-    padding: 1.3rem .7rem;
-  }
+  // @include mobileXXl {
+  //   font-size: 1.2rem;
+  //   height: 2.5rem;
+  //   padding: 1.3rem .7rem;
+  // }
 }
 
 .dollar-svg {
