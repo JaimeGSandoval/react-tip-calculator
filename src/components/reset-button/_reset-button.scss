@@ -12,11 +12,9 @@
   padding: .6rem 0;
   font-family: $spaceMonoBold;
   font-size: 1.2rem;
-  margin-top: .8rem;
+  margin: .8rem 0;
 
   @include mobileMed {
-    margin-top: 2.2rem;
-    // font-size: 1.5rem;
     padding: .8rem 0;
   }
 }
