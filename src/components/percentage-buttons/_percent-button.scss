@@ -6,7 +6,6 @@
   justify-content: space-between;
 
   input {
-    margin: .2rem 0;
     width: 46%;
     color: $darkCyan;
     background-color: $lightGrayCyan;
@@ -30,27 +29,9 @@
       margin-right: .5rem;
     }
 
-    // @include mobileSm {
-    //   padding: .5rem 0;
-    //   font-size: 1.2rem;
-    //   top: 2px;
-    //   height: 38px;
-    // }
-
-    // @include mobileMed {
-    //   height: 45px;
-    //   font-size: 1.4rem;
-    // }
-
-    // @include mobileXl {
-    //   top: 6px;
-    //   height: 45px;
-    // }
-
-    // @include mobileXXl {
-    //   height: 50px;
-    //   top: 8px;
-    // }
+    @include mobileMed {
+      height: 2.5rem;
+    }
 
     @include desktopSm {
       width: 26%;
@@ -59,8 +40,7 @@
 }
 
 .buttons {
-  // padding: .4rem 0;
-  margin: .2rem 0;
+  margin-bottom: .5rem;
   width: 46%;
   color: $white;
   background-color: $darkCyan;
@@ -70,32 +50,13 @@
   font-size: 1rem;
   font-family: $spaceMono;
   cursor: pointer;
+  padding: .6rem 0;
 
-  // @include mobileSm {
-  //   font-size: 1.2rem;
-  //   padding: .6rem 0;
-  //   margin: .3rem 0;
-  // }
-
-  // @include mobileMed {
-  //   font-size: 1.4rem;
-  //   padding: .7rem 0;
-  // }
-
-  // @include mobileLg {
-  //   font-size: 1.4rem;
-  //   margin-bottom: .6rem;
-  // }
-
-  // @include mobileXl {
-  //   padding: .8rem 0;
-  //   margin: .5rem 0;
-  // }
-
-  // @include mobileXXl {
-  //   padding: 1rem 0;
-  //   margin: .6rem 0;
-  // }
+  @include mobileMed {
+    font-size: 1.2rem;
+    padding: .7rem 0;
+    margin-bottom: .6rem;
+  }
 
   @include desktopSm {
     width: 26%;
@@ -105,31 +66,10 @@
 .select-header {
   color: $darkerGrayCyan;
   font-family: $spaceMonoBold;
-  padding-top: .7rem;
-  padding-bottom: .7rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin-top: .5rem;
   display: block;
-
-  // @include mobileSm {
-  //   padding-top: 1rem;;
-  // }
-
-  // @include mobileMed {
-  //   font-size: 1.3rem;
-  // }
-
-  // @include mobileLg {
-  //   padding-top: 1.3rem;
-  //   font-size: 1.2rem;
-  // }
-
-  // @include mobileXl {
-  //   padding-top: 1.5rem;
-  //   font-size: 1.3rem;
-  // }
-
-  // @include mobileXXl {
-  //   padding-top: 1.8rem;
-  // }
 }
 
 .selected-percent {
