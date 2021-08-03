@@ -3,14 +3,6 @@
 header {
   padding: 1.2rem 0;
   background-color: $primaryBackground;
-
-  // @include mobileSm {
-  //   padding: 1.2rem 0;
-  // }
-
-  // @include mobileXl {
-  //   padding: 1.8rem 0;
-  // }
 }
 
 .header-text {
@@ -22,12 +14,4 @@ header {
   color: $darkCyan;
   width: 100%;
   display: block;
-
-  // @include mobileMed {
-  //   font-size: 1.4rem;
-  // }
-
-  // @include mobileXXl {
-  //   font-size: 1.4rem;
-  // }
 }
