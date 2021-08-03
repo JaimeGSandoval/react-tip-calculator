@@ -1,40 +1,22 @@
 @import "../../sass/abstracts/variables", "../../sass/layout/media-queries.scss";
 
-button {
+.reset-button {
   text-transform: uppercase;
   background-color: $strongCyan;
   color: $darkCyan;
   border: 0;
   outline: 0;
   width: 100%;
-  margin: auto;
   display: block;
   border-radius: 5px;
   padding: .6rem 0;
   font-family: $spaceMonoBold;
   font-size: 1.2rem;
-  margin-top: .4rem;
+  margin-top: .8rem;
 
-  // @include mobileSm {
-  //   font-size: 1.4rem;
-  //   padding: .7rem 0;
-  // }
-
-  // @include mobileMed {
-  //   margin-top: .6rem;
-  //   font-size: 1.5rem;
-  //   padding: .8rem 0;
-  // }
-
-  // @include mobileLg {
-  //   font-size: 1.4rem;
-  // }
-
-  // @include mobileXl {
-  //   margin-top: 1.7rem;
-  // }
-
-  // @include mobileXXl {
-  //   margin-top: 1.2rem;
-  // }
+  @include mobileMed {
+    margin-top: 2.2rem;
+    // font-size: 1.5rem;
+    padding: .8rem 0;
+  }
 }

@@ -1,6 +1,8 @@
 @import "../../sass/abstracts/variables", "../../sass/layout/media-queries.scss";
 
 .person-input-container {
+  margin-top: .3rem;
+
   @include mobileSm {
     padding-top: .7rem;
   }
