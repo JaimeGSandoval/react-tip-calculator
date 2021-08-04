@@ -1,6 +1,10 @@
 @import './abstracts/_variables', './base/fonts', './base/reset',
   './layout/media-queries.scss';
 
+  html {
+    overflow-y: hidden;
+  }
+
 body {
   background-color: $white;
   font-family: $spaceMono;

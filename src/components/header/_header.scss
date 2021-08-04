@@ -1,11 +1,13 @@
 @import '../../sass/abstracts/variables', '../../sass/layout/media-queries';
 
 header {
-  padding: 1.2rem 0;
+  // padding: 1.2rem 0;
+  padding: .8rem 0;
   background-color: $primaryBackground;
 }
 
 .header-text {
+  // font-size: 1.2rem;
   font-size: 1.2rem;
   text-align: center;
   text-transform: uppercase;
