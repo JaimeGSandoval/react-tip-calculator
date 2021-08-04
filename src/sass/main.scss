@@ -5,9 +5,9 @@ body {
   background-color: $white;
   font-family: $spaceMono;
 
-  @include mobileXl {
-    overflow-y: hidden;
-  }
+  overflow-y: hidden;
+  // @include mobileXl {
+  // }
 }
 
 .content-container {
