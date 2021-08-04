@@ -18,9 +18,9 @@ html {
   -webkit-text-size-adjust: 100%;
   height: 100%;
 
-  @include mobileXl {
-    overflow-y: hidden;
-  }
+  overflow-y: hidden;
+  // @include mobileXl {
+  // }
 }
 
 body {
