@@ -77,8 +77,8 @@ function App() {
 
   return (
     <>
-      <Header />
       <div className="content-container">
+        <Header />
         <main className="main-container">
           <BillInput
             billAmount={billTotal}

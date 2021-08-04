@@ -3,12 +3,13 @@
 
   html {
     overflow-y: hidden!important;
+    height: 100%;
   }
 
 body {
   background-color: $white;
   font-family: $spaceMono;
-
+height: 100%;
   overflow-y: hidden!important;
   // @include mobileXl {
   // }
