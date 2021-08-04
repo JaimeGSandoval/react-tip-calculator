@@ -4,7 +4,10 @@
 body {
   background-color: $white;
   font-family: $spaceMono;
-  // overflow-y: hidden;
+
+  @include mobileXl {
+    overflow-y: hidden;
+  }
 }
 
 .content-container {
