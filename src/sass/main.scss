@@ -2,14 +2,14 @@
   './layout/media-queries.scss';
 
   html {
-    overflow-y: hidden;
+    overflow-y: hidden!important;
   }
 
 body {
   background-color: $white;
   font-family: $spaceMono;
 
-  overflow-y: hidden;
+  overflow-y: hidden!important;
   // @include mobileXl {
   // }
 }
@@ -21,6 +21,7 @@ body {
   max-width: 100%;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  overflow-y: hidden;
 
   @include desktopSm {
     display: flex;
@@ -57,6 +58,7 @@ body {
   margin: auto;
   padding: .5rem 0.5rem;
   margin-top: 1.3rem;
+  overflow-y: hidden;
 }
 
 input::-webkit-outer-spin-button,
