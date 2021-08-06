@@ -2,6 +2,10 @@
 
 .bill-input-container {
   margin-top: .2rem;
+
+  @include mobileXXl {
+    margin-top: 1rem;
+  }
 }
 
 .bill-text-box {
@@ -36,6 +40,10 @@
 
   &:focus {
     border-color: $strongCyan;
+  }
+
+  @include mobileXXl {
+    height: 2.5rem;
   }
 }
 

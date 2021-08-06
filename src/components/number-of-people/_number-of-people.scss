@@ -6,15 +6,22 @@
 
 .person-text-box {
   padding-bottom: .5rem;
-  // padding-top: .5rem;
   display: flex;
   justify-content: space-between;
+
+  @include mobileXXl {
+    margin-top: 1rem;
+  }
 }
 
 .person-text {
   color: $darkCyan;
   font-family: $spaceMonoBold;
   font-size: .9rem;
+
+  @include mobileXXl {
+    font-size: 1rem
+  }
 }
 
 .person-input-box {
@@ -36,6 +43,10 @@
 
   &:focus {
     border-color: $strongCyan;
+  }
+
+  @include mobileXXl {
+    height: 2.5rem;
   }
 }
 

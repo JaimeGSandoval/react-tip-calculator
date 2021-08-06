@@ -58,6 +58,11 @@
     margin-bottom: .6rem;
   }
 
+  @include mobileXXl {
+    font-size: 1.4rem;
+    margin-bottom: .7rem;
+  }
+
   @include desktopSm {
     width: 26%;
   }
@@ -70,6 +75,10 @@
   padding-bottom: .2rem;
   margin-top: .5rem;
   display: block;
+
+  @include mobileXXl {
+    margin-top: 1rem;
+  }
 }
 
 .selected-percent {

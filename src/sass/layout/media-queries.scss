@@ -27,6 +27,13 @@
   }
 }
 
+// iphone 12 pro max
+@mixin mobileXXl {
+  @media (min-width: 428px) {
+    @content;
+  }
+}
+
 // @mixin tablet {
 //   @media (min-width: 768px) {
 //     @content;
