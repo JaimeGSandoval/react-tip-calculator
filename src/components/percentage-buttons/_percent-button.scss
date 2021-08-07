@@ -34,7 +34,7 @@
     }
 
     @include desktopSm {
-      width: 26%;
+      width: 30%;
    }
   }
 }
@@ -64,7 +64,8 @@
   }
 
   @include desktopSm {
-    width: 26%;
+    width: 30%;
+    font-size: 1rem;
   }
 }
 
@@ -78,6 +79,11 @@
 
   @include mobileXXl {
     margin-top: 1rem;
+  }
+
+  @include desktopSm {
+    margin-top: 1.7rem;
+    padding-bottom: 1rem;
   }
 }
 
