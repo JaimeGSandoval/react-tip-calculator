@@ -18,11 +18,19 @@
   @include mobileMed {
     font-size: 1.2rem;
   }
+
+  @include desktopSm {
+    font-size: 1rem;
+  }
 }
 
 .span-2 {
   color: $darkerGrayCyan;
   font-family: $spaceMono;
+
+  @include desktopSm {
+    font-size: 1rem;
+  }
 }
 
 .tip-amount {
@@ -33,5 +41,9 @@
 
   @include mobileXl {
     font-size: 1.5rem;
+  }
+
+  @include mobileXl {
+    font-size: 1.9rem;
   }
 }

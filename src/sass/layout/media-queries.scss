@@ -4,41 +4,50 @@
   }
 }
 
+// iphone 6/7/8 plus
 @mixin mobileMed {
   @media (min-width: 414px) {
     @content;
   }
 }
 
-// @mixin mobileLg {
-//   @media only screen
-//     and (width : 375px)
-//     and (height : 812px) {
-//       @content;
-//     }
-// }
+// iphone 11 pro
+@mixin mobileLg {
+  @media only screen
+    and (width : 375px)
+    and (height : 812px) {
+      @content;
+    }
+}
 
-// @mixin mobileXl {
-//   @media (min-width: 390px) and (min-height: 844px) {
-//     @content;
-//   }
-// }
-
-
+// iphone 11 / iphone 11 pro max
 @mixin mobileXl {
   @media (min-width: 414px) and (min-height: 896px) {
     @content;
   }
 }
 
-// @mixin tablet {
-//   @media (min-width: 768px) {
-//     @content;
-//   }
-// }
+// iphone 12 pro max
+@mixin mobileXXl {
+  @media (min-width: 428px) {
+    @content;
+  }
+}
 
 @mixin desktopSm {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin desktop {
   @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktopLg {
+  @media (min-width: 1400px) {
     @content;
   }
 }
