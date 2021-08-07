@@ -1,8 +1,12 @@
 @import '../../sass/abstracts/variables', '../../sass/layout/media-queries';
 
 header {
-  padding: 1.2rem 0;
+  padding: .8rem 0;
   background-color: $primaryBackground;
+
+  @include desktopSm {
+    margin-bottom: 1rem;
+  }
 }
 
 .header-text {

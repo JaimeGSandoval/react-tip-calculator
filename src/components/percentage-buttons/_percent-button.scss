@@ -34,7 +34,7 @@
     }
 
     @include desktopSm {
-      width: 26%;
+      width: 30%;
    }
   }
 }
@@ -58,18 +58,33 @@
     margin-bottom: .6rem;
   }
 
+  @include mobileXXl {
+    font-size: 1.4rem;
+    margin-bottom: .7rem;
+  }
+
   @include desktopSm {
-    width: 26%;
+    width: 30%;
+    font-size: 1rem;
   }
 }
 
 .select-header {
   color: $darkerGrayCyan;
   font-family: $spaceMonoBold;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
   margin-top: .5rem;
   display: block;
+
+  @include mobileXXl {
+    margin-top: 1rem;
+  }
+
+  @include desktopSm {
+    margin-top: 1.7rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .selected-percent {

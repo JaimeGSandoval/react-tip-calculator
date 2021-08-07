@@ -13,8 +13,13 @@
   font-family: $spaceMonoBold;
   font-size: 1.2rem;
   margin: .8rem 0;
+  cursor: pointer;
 
   @include mobileXl {
     padding: .8rem 0;
+  }
+
+  @include desktopSm {
+    margin-top: 6rem;
   }
 }
