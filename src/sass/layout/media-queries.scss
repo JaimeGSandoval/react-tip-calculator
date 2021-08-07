@@ -34,14 +34,20 @@
   }
 }
 
-// @mixin tablet {
-//   @media (min-width: 768px) {
-//     @content;
-//   }
-// }
-
 @mixin desktopSm {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin desktop {
   @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktopLg {
+  @media (min-width: 1400px) {
     @content;
   }
 }

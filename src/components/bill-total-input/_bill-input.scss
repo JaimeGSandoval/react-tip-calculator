@@ -6,6 +6,10 @@
   @include mobileXXl {
     margin-top: 1rem;
   }
+
+  @include desktopSm {
+    margin: initial;
+  }
 }
 
 .bill-text-box {
